@@ -1,1 +1,13 @@
 // HEADER STYLE
+.header {
+  box-shadow: 0px 2px 3px $grey;
+  &__wrapper {
+    padding: 20px;
+    background-color: $white;
+  }
+  &__title {
+    font-size: $small;
+    font-family: $avertaSemiBold;
+    color: $black;
+  }
+}

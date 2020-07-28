@@ -1,33 +1,25 @@
 import React from "react";
-import { ActiveLink } from "react-uicomp";
-import { Link } from "react-router-dom";
+import { useMeasure } from "react-uicomp";
+
+import NavGroup from "./components/NavGroup.component";
 
 const Sidenav = () => {
   return (
     <div className="sidenav">
-      <div className="sidenav__nav-group">
-        <h3 className="sidenav__title">Introduction</h3>
-        <ul className="sidenav__navitems">
-          <li className="sidenav__navitem">
-            <ActiveLink
-              to="/start"
-              className="sidenav__navlink"
-              activeClassName="sidenav__navlink--active"
-            >
-              Quick Start
-            </ActiveLink>
-          </li>
-          <li className="sidenav__navitem">
-            <ActiveLink
-              to="/hi"
-              className="sidenav__navlink"
-              activeClassName="sidenav__navlink--active"
-            >
-              Quick Hi
-            </ActiveLink>
-          </li>
-        </ul>
-      </div>
+      <NavGroup
+        title="Introduction"
+        navItems={[
+          { name: "Quick Start", link: "/start" },
+          { name: "QC STRT", link: "/hehe" },
+        ]}
+      />
+      <NavGroup
+        title="Introduction"
+        navItems={[
+          { name: "Quick Start", link: "/start" },
+          { name: "QC STRT", link: "/hehe" },
+        ]}
+      />
     </div>
   );
 };

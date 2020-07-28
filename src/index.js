@@ -4,10 +4,10 @@ import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import reducers from "./reducers/Reducers";
-import "./sass/main.scss";
 import Prism from "prismjs";
-import "../node_modules/prismjs/themes/prism-tomorrow.css";
 import AppWithRouter from "./components/app/App";
+import "../node_modules/prismjs/themes/prism-tomorrow.css";
+import "./sass/main.scss";
 
 const store = createStore(reducers, applyMiddleware(thunk));
 

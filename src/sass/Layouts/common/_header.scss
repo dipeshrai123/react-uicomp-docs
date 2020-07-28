@@ -1,6 +1,16 @@
 // HEADER STYLE
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  height: 75px;
   box-shadow: 0px 2px 3px $grey;
+  background-color: white;
+
   &__wrapper {
     padding: 20px;
     background-color: $white;

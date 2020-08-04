@@ -3,13 +3,12 @@ import {
   useMeasure,
   ActiveLink,
   AnimatedBlock,
-  interpolate,
   useAnimatedValue,
 } from "react-uicomp";
 
 const NavGroup = ({ title, navItems }) => {
   const { handler, height } = useMeasure();
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const animatedHeight = useAnimatedValue(expanded ? height : 0);
 
   return (

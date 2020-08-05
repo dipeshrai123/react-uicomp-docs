@@ -15,9 +15,10 @@ const ThemeProvider = () => {
       <section>
         <Paragraph>
           Theme allows you to handle the themes for your application. Theme
-          provides a {"<Theme.Provider>"} HOC to handle any number of themes you
-          want to add into your application. It is mostly useful if you want to
-          implement light themes and dark themes.
+          provides a <span className="highlight">{"<Theme.Provider>"}</span> HOC
+          to handle any number of themes you want to add into your application.
+          It is mostly useful if you want to implement light themes and dark
+          themes.
         </Paragraph>
       </section>
       <section>

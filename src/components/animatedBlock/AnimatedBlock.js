@@ -14,11 +14,15 @@ const AnimatedBlock = () => {
       <Title>Animated Block</Title>
       <section>
         <Paragraph>
-          Animated Node returned from useAnimatedValue() hook is not directly
-          read by HTMLElement. It needs a special type of element that can read
-          it. So, we have an <b>{"<AnimatedBlock>"}</b> component which inherits
-          all properties of the <b>{"<div>"}</b> element and it can accept the
-          animated nodes returned from useAnimatedValue() hook.
+          Animated Node returned from{" "}
+          <span className="highlight">useAnimatedValue()</span> hook is not
+          directly read by <span className="highlight">HTMLElement</span>. It
+          needs a special type of element that can read it. So, we have an{" "}
+          <span className="highlight">{"<AnimatedBlock>"}</span> component which
+          inherits all properties of the{" "}
+          <span className="highlight">{"<div>"}</span> element and it can accept
+          the animated nodes returned from{" "}
+          <span className="highlight">useAnimatedValue()</span> hook.
         </Paragraph>
         <SecondaryTitle>Example</SecondaryTitle>
         <Code>

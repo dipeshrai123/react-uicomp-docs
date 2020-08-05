@@ -21,6 +21,8 @@ const WhyUse = () => {
           components that allows you to create beautiful UI Components and
           animation very easily.
         </Paragraph>
+
+        <SecondaryTitle>For Routing</SecondaryTitle>
         <Paragraph>
           Let’s say you want to create a dashboard which should have different
           users who can access it. Suppose <b>ROLE_A, ROLE_B</b> and{" "}

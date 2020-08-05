@@ -14,27 +14,35 @@ const UseAnimatedValue = () => {
       <Title>UseAnimatedValue()</Title>
       <section>
         <Paragraph>
-          useAnimatedValue() is a very flexible and powerful hook that lets you
-          define animated values. Its value is preserved until the component
-          unmounts and doesn’t change during the state change and re-render of a
-          component.
+          <span className="highlight">useAnimatedValue()</span> is a very
+          flexible and powerful hook that lets you define animated values. Its
+          value is preserved until the component unmounts and doesn’t change
+          during the state change and re-render of a component.
         </Paragraph>
         <Paragraph>
-          useAnimatedValue() returns an animated node initialized at
-          initialValue. Animated Node is a special type of Node that has value
+          <span className="highlight">useAnimatedValue()</span> returns an
+          animated node initialized at
+          <span className="highlight">initialValue</span>. Animated Node is a
+          special type of Node that has <span className="highlight">value</span>
           property which is automatically animated if initialValue changes at
           some point or if we set its value to some number.
         </Paragraph>
-        <Paragraph>Let us define an animated value called opacity.</Paragraph>
+        <Paragraph>
+          Let us define an animated value called{" "}
+          <span className="highlight">opacity</span>.
+        </Paragraph>
         <Code>const opacity = useAnimatedValue(0)</Code>
         <Paragraph>
-          Here we create an animated node called opacity at an initial value
-          initial value 0. And opacity has a property called value. At any time
-          we set opacity.value to some number then it changes its value from 0
-          to that number.
+          Here we create an animated node called{" "}
+          <span className="highlight">opacity</span> at an initial value initial
+          value <span className="highlight">0</span>. And opacity has a property
+          called <span className="highlight">value</span>. At any time we set
+          opacity.value to some number then it changes its value from 0 to that
+          number.
         </Paragraph>
         <Paragraph>
-          We can change the opacity.value to 1 if a user clicks a button. It
+          We can change the <span className="highlight">opacity.value</span> to{" "}
+          <span className="highlight">1</span> if a user clicks a button. It
           auto animates the value from 0 to 1.
         </Paragraph>
         <Code>

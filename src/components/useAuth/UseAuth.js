@@ -14,9 +14,11 @@ const UseAuth = () => {
       <Title>useAuth()</Title>
       <section>
         <Paragraph>
-          useAuth() is a hook which gives access to the config object and state
-          object defined in {"<Auth.Provider>"} HOC directly. For example it
-          returns an object with isLoggedIn, userRole and all the keys passed
+          <span className="highlight">useAuth()</span> is a hook which gives
+          access to the config object and state object defined in{" "}
+          {"<Auth.Provider>"} HOC directly. For example it returns an object
+          with <span className="highlight">isLoggedIn</span>,{" "}
+          <span className="highlight">userRole</span> and all the keys passed
           inside the state object.
         </Paragraph>
         <Paragraph>It is useful for some scenarios like :</Paragraph>

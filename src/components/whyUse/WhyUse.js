@@ -19,25 +19,53 @@ const WhyUse = () => {
           Let’s say you want to create a dashboard which should have different
           users who can access it. Suppose <b>ROLE_A, ROLE_B</b> and{" "}
           <b>ROLE_C</b> are some roles who can access the dashboard. And suppose
-          there are some routes /route_a, /route_b, /route_c, /route_d. There
-          are some restrictions for all user roles to access these routes.
+          there are some routes{" "}
+          <span className="highlight">
+            <b>/route_a</b>
+          </span>
+          ,{" "}
+          <span className="highlight">
+            <b>/route_b</b>
+          </span>
+          ,{" "}
+          <span className="highlight">
+            <b>/route_c</b>
+          </span>
+          ,{" "}
+          <span className="highlight">
+            <b>/route_d</b>
+          </span>
+          . There are some restrictions for all user roles to access these
+          routes.
         </Paragraph>
         <ol className="list">
           <li className="list__item">
-            <b>/route_a</b> can be accessed by all user roles{" "}
-            <b>ROLE_A, ROLE_B</b> and <b>ROLE_C.</b>
+            <span className="highlight">
+              <b>/route_a</b>
+            </span>{" "}
+            can be accessed by all user roles <b>ROLE_A, ROLE_B</b> and{" "}
+            <b>ROLE_C.</b>
           </li>
           <li className="list__item">
-            <b>/route_b</b> can be accessed by all user roles if they are logged
-            in and they cannot access after login.
+            <span className="highlight">
+              <b>/route_b</b>
+            </span>{" "}
+            can be accessed by all user roles if they are logged in and they
+            cannot access after login.
           </li>
           <li className="list__item">
-            <b>/route_c</b> can be accessed by <b>ROLE_A </b>and <b> ROLE_B </b>{" "}
-            but not <b> ROLE_C.</b>
+            <span className="highlight">
+              <b>/route_c</b>
+            </span>{" "}
+            can be accessed by <b>ROLE_A </b>and <b> ROLE_B </b> but not{" "}
+            <b> ROLE_C.</b>
           </li>
           <li className="list__item">
-            <b>/route_d</b> can be accessed by <b> ROLE_B</b> and <b>ROLE_C</b>{" "}
-            but not <b>ROLE_A</b> and they cannot be accessed without login.
+            <span className="highlight">
+              <b>/route_d</b>
+            </span>{" "}
+            can be accessed by <b> ROLE_B</b> and <b>ROLE_C</b> but not{" "}
+            <b>ROLE_A</b> and they cannot be accessed without login.
           </li>
         </ol>
         <Paragraph>

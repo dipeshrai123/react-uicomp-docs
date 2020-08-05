@@ -10,7 +10,11 @@ const Auth = () => {
       <section>
         <Paragraph>
           Auth provides 2 different HOCs which handles all the authentications
-          defined by {"<Navigation.Provider>"} HOC.
+          defined by{" "}
+          <span className="highlight">
+            <b>{"<Navigation.Provider>"}</b>
+          </span>{" "}
+          HOC.
         </Paragraph>
       </section>
       <ol className="list">
@@ -25,21 +29,28 @@ const Auth = () => {
           <Paragraph>It accepts two props :</Paragraph>
           <ol className="list list--nested list--alpha">
             <li className="list__item">
-              <b>config</b> (object)
+              <span className="highlight">
+                <b>config (object)</b>
+              </span>
               <br />
               You must pass an config object to config prop. Object should be of
               following shape :
             </li>
             <ul className="list list--nested">
               <li className="list__item">
-                isLoggedIn ( boolean ) : Defines logged state of a user
+                <span className="highlight">isLoggedIn ( boolean )</span> :
+                Defines logged state of a user
               </li>
               <li className="list__item">
-                isLoggedIn ( boolean ) : Defines logged state of a user
+                <span className="highlight">userRole ( string )</span> : Defines
+                current role of a user
               </li>
             </ul>
+            <br />
             <li className="list__item">
-              <b>state ( object )</b>
+              <span className="highlight">
+                <b>state ( object )</b>
+              </span>
               <br />
               It can be used as a global state which can accept any object with
               any keys. It is mostly used to change the config state. For

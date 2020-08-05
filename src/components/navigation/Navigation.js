@@ -21,16 +21,23 @@ const Navigation = () => {
         </Paragraph>
         <ul className="list">
           <li className="list__item">
-            <b>Public routes</b> are those routes which can be accessed with or
-            without login.
+            <span className="highlight">
+              <b>Public routes</b>
+            </span>{" "}
+            are those routes which can be accessed with or without login.
           </li>
           <li className="list__item">
-            <b>Private routes</b> are those routes which cannot be accessed
-            without login.
+            <span className="highlight">
+              <b>Private routes</b>
+            </span>{" "}
+            are those routes which cannot be accessed without login.
           </li>
           <li className="list__item">
-            <b>Protected routes</b> are those types of public routes which
-            cannot be accessed if a user is logged in.
+            <span className="highlight">
+              <b>Protected routes</b>
+            </span>{" "}
+            are those types of public routes which cannot be accessed if a user
+            is logged in.
           </li>
         </ul>
         <Paragraph>
@@ -39,8 +46,12 @@ const Navigation = () => {
         </Paragraph>
         <Paragraph>
           To define these React UI Comp provides a Higher Order Component (HOC)
-          called <b>{"<Navigation.Provider>"}</b>. It allows us to define all
-          those routes and roles by passing them as a prop.
+          called{" "}
+          <span className="highlight">
+            <b>{"<Navigation.Provider>"}</b>
+          </span>
+          . It allows us to define all those routes and roles by passing them as
+          a prop.
         </Paragraph>
       </section>
       <section>
@@ -48,7 +59,10 @@ const Navigation = () => {
         <Paragraph>
           <b>Navigation.Provider</b> manages all the routes and user roles for
           you. Usually you should wrap an entire app i.e. root component with{" "}
-          <b>{"<Navigation.Provider>"}</b> HOC.
+          <span className="highlight">
+            <b>{"<Navigation.Provider>"}</b>
+          </span>{" "}
+          HOC.
         </Paragraph>
         <Paragraph>
           <b>Configuring publicPaths, privatePaths and userRoles</b>
@@ -82,6 +96,7 @@ const Navigation = () => {
               true then it is protected route otherwise public
             </li>
           </ol>
+          <br />
           <li className="list__item">
             <span className="highlight">
               <b>privatePaths</b>
@@ -106,6 +121,7 @@ const Navigation = () => {
               Defines a component for a path
             </li>
           </ol>
+          <br />
           <li className="list__item">
             <span className="highlight">
               <b>userRoles</b>

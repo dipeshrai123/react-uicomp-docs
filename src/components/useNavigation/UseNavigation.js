@@ -1,6 +1,8 @@
 import React from "react";
 import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
+import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
+import Code from "../common/code/Code.common";
 
 const UseNavigation = () => {
   return (
@@ -60,6 +62,16 @@ const UseNavigation = () => {
             object provided by react-router-dom useParams() hook.
           </li>
         </ul>
+      </section>
+      <section>
+        <SecondaryTitle>Example</SecondaryTitle>
+        <Code>
+          {`
+import { useNavigation } from 'react-uicomp';
+
+const { navigation, history, location, params } = useNavigation()
+          `}
+        </Code>
       </section>
     </div>
   );

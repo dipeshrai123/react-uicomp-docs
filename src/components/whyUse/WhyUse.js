@@ -1,6 +1,8 @@
 import React from "react";
 import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
+import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
+import Code from "../common/code/Code.common";
 
 const WhyUse = () => {
   return (
@@ -77,6 +79,40 @@ const WhyUse = () => {
           your head :) . It provides different HOCs and hooks will help you
           define all those routing in a single component without any headache.
         </Paragraph>
+      </section>
+      <section>
+        <SecondaryTitle>Basic Usage</SecondaryTitle>
+        <Code>
+          {`
+// import Auth from here
+import { Navigation, Auth } from "react-uicomp";
+
+...
+
+const App = () => {
+  const [config, setConfig] = useState({ isLoggedIn: false, userRole: "user" });
+
+  return (
+    <Navigation.Provider
+      publicPaths={publicPaths}
+      privatePaths={privatePaths}
+      userRoles={userRoles}
+    >
+      <Auth.Provider
+        config={config}
+        state={{
+          logout: () => {
+            setConfig({ isLoggedIn: false, userRole: "user" });
+          }
+        }}
+      >
+        <Auth.Screens />
+      </Auth.Provider>
+    </Navigation.Provider>
+  );
+};
+          `}
+        </Code>
       </section>
     </div>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
 import Code from "../common/code/Code.common";
+import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 
 const UseAnimatedValue = () => {
   return (
@@ -33,6 +34,37 @@ const UseAnimatedValue = () => {
           auto animates the value from 0 to 1.
         </Paragraph>
         <Code>{"onClick = () => (opacity.value = 1)"}</Code>
+      </section>
+      <section>
+        <SecondaryTitle>Example</SecondaryTitle>
+        <Code>
+          {`
+import { AnimatedBlock, useAnimatedValue } from "react-uicomp";
+
+export default function() {
+  const opacity = useAnimatedValue(0); // It initializes opacity object with value 0.
+
+  return (
+      <div>
+          {/* AnimatedBlock component should be used with useAnimatedValue() */}
+          <AnimatedBlock 
+            style={{
+              opacity: opacity.value, // value property should be passed
+              width: 100,
+              padding: 20,
+              background: "#39F",
+            }}
+          >
+            ANIMATED
+          </AnimatedBlock>
+          
+          {/* Animating from 0 to 1 is very simple just assign opacity.value = 1 */}
+          <button onClick={() => opacity.value = 1}>Animate Me</button>
+      </div>
+  );
+}
+          `}
+        </Code>
       </section>
     </div>
   );

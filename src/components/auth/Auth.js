@@ -2,6 +2,7 @@ import React from "react";
 import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
 import Code from "../common/code/Code.common";
+import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 
 const Auth = () => {
   return (
@@ -84,6 +85,40 @@ const Auth = () => {
           </Paragraph>
         </li>
       </ol>
+      <section>
+        <SecondaryTitle>Example</SecondaryTitle>
+        <Code>
+          {`
+// import Auth from here
+import { Navigation, Auth } from "react-uicomp";
+
+...
+
+const App = () => {
+  const [config, setConfig] = useState({ isLoggedIn: false, userRole: "user" });
+
+  return (
+    <Navigation.Provider
+      publicPaths={publicPaths}
+      privatePaths={privatePaths}
+      userRoles={userRoles}
+    >
+      <Auth.Provider
+        config={config}
+        state={{
+          logout: () => {
+            setConfig({ isLoggedIn: false, userRole: "user" });
+          }
+        }}
+      >
+        <Auth.Screens />
+      </Auth.Provider>
+    </Navigation.Provider>
+  );
+};
+          `}
+        </Code>
+      </section>
     </div>
   );
 };

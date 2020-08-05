@@ -32,8 +32,8 @@ const Sidenav = () => {
         title="Theming"
         navItems={[
           {
-            name: "Theme Provider",
-            link: "/docs/theme-provider",
+            name: "Theme",
+            link: "/docs/theme",
           },
           { name: "useTheme()", link: "/docs/use-theme" },
         ]}

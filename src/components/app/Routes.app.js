@@ -75,7 +75,7 @@ export const PUBLIC_PATHS = [
   {
     name: "Theme Provider",
     key: "ThemeProvider",
-    path: "/docs/theme-provider",
+    path: "/docs/theme",
     component: ThemeProvider,
     restricted: true,
   },

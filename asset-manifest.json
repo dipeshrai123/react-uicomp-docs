@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/react-uicomp/static/css/main.ef66f968.chunk.css",
+    "main.js": "/react-uicomp/static/js/main.3aaea969.chunk.js",
+    "main.js.map": "/react-uicomp/static/js/main.3aaea969.chunk.js.map",
+    "runtime-main.js": "/react-uicomp/static/js/runtime-main.ec2ad39f.js",
+    "runtime-main.js.map": "/react-uicomp/static/js/runtime-main.ec2ad39f.js.map",
+    "static/css/2.aa61572a.chunk.css": "/react-uicomp/static/css/2.aa61572a.chunk.css",
+    "static/js/2.0313e28b.chunk.js": "/react-uicomp/static/js/2.0313e28b.chunk.js",
+    "static/js/2.0313e28b.chunk.js.map": "/react-uicomp/static/js/2.0313e28b.chunk.js.map",
+    "index.html": "/react-uicomp/index.html",
+    "precache-manifest.c2955951c75af9b0cddd34850ccccaa6.js": "/react-uicomp/precache-manifest.c2955951c75af9b0cddd34850ccccaa6.js",
+    "service-worker.js": "/react-uicomp/service-worker.js",
+    "static/css/2.aa61572a.chunk.css.map": "/react-uicomp/static/css/2.aa61572a.chunk.css.map",
+    "static/css/main.ef66f968.chunk.css.map": "/react-uicomp/static/css/main.ef66f968.chunk.css.map",
+    "static/js/2.0313e28b.chunk.js.LICENSE": "/react-uicomp/static/js/2.0313e28b.chunk.js.LICENSE",
+    "static/media/main.scss": "/react-uicomp/static/media/AvertaSemibold.2182b9b6.otf",
+    "static/media/Logo.png": "/react-uicomp/static/media/Logo.a2929979.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ec2ad39f.js",
+    "static/css/2.aa61572a.chunk.css",
+    "static/js/2.0313e28b.chunk.js",
+    "static/css/main.ef66f968.chunk.css",
+    "static/js/main.3aaea969.chunk.js"
+  ]
+}

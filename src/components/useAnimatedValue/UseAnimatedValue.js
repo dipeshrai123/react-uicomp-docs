@@ -12,7 +12,7 @@ const UseAnimatedValue = () => {
 
   return (
     <div>
-      <Title>UseAnimatedValue()</Title>
+      <Title>useAnimatedValue()</Title>
       <section>
         <Paragraph>
           <span className="highlight">useAnimatedValue()</span> is a very

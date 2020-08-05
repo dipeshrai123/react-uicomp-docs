@@ -26,6 +26,7 @@ const App = () => {
             "/docs/use-theme",
             "/docs/use-animated-value",
             "/docs/animated-block",
+            "/docs/interpolate",
           ],
         },
       }}

@@ -12,7 +12,7 @@ const AnimatedBlock = () => {
 
   return (
     <div>
-      <Title>Animated Block</Title>
+      <Title>AnimatedBlock</Title>
       <section>
         <Paragraph>
           Animated Node returned from{" "}

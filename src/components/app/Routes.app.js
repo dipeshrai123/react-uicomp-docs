@@ -11,6 +11,7 @@ import ThemeProvider from "../themeProvider/ThemeProvider";
 import UseTheme from "../useTheme/UseTheme";
 import UseAnimatedValue from "../useAnimatedValue/UseAnimatedValue";
 import AnimatedBlock from "../animatedBlock/AnimatedBlock";
+import Interpolate from "../interpolate/Interpolate";
 
 const Redirect = () => {
   const { navigation } = useNavigation();
@@ -97,6 +98,12 @@ export const PUBLIC_PATHS = [
     name: "AnimatedBlock",
     path: "/docs/animated-block",
     component: AnimatedBlock,
+    restricted: true,
+  },
+  {
+    name: "Interpolate",
+    path: "/docs/interpolate",
+    component: Interpolate,
     restricted: true,
   },
   {

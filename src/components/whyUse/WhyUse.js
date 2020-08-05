@@ -3,6 +3,7 @@ import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
 import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 import Code from "../common/code/Code.common";
+import InterpolateExample from "../demos/interpolate";
 
 const WhyUse = () => {
   React.useEffect(() => {
@@ -117,6 +118,66 @@ const App = () => {
     </Navigation.Provider>
   );
 };
+          `}
+        </Code>
+      </section>
+
+      <section>
+        <SecondaryTitle>For Animation</SecondaryTitle>
+
+        <Paragraph>
+          Let's take an example from the previous section. The box changes its
+          <span className="highlight">opacity</span> to{" "}
+          <span className="highlight">0</span> when we click the hide button and
+          to <span className="highlight">1</span> when we click the show button.
+          We also want the box to shrink to{" "}
+          <span className="highlight">.5</span> scale if{" "}
+          <span className="highlight">opacity</span> is
+          <span className="highlight">0</span> and to{" "}
+          <span className="highlight">1</span> if{" "}
+          <span className="highlight">opacity</span> is{" "}
+          <span className="highlight">1</span>.
+        </Paragraph>
+      </section>
+
+      <section>
+        <SecondaryTitle>Demo</SecondaryTitle>
+
+        <InterpolateExample />
+      </section>
+      <section>
+        <SecondaryTitle>Example</SecondaryTitle>
+        <Code>
+          {`
+import React from "react";
+import { AnimatedBlock, useAnimatedValue, interpolate } from "react-uicomp";
+
+export default function Interpolate() {
+  const opacity = useAnimatedValue(1);
+
+  return (
+    <div>
+      <AnimatedBlock
+        style={{
+          width: 100,
+          height: 100,
+          borderRadius: 4,
+          background: "#39F",
+          opacity: opacity.value,
+          // We are interpolating the transform scale property
+          transform: interpolate(opacity.value, {
+            inputRange: [0, 1],
+            outputRange: ["scale(0.5)", "scale(1)"],
+            extrapolate: "clamp",
+          }),
+        }}
+      />
+      <br />
+      <button onClick={() => (opacity.value = 1)}>Show</button>
+      <button onClick={() => (opacity.value = 0)}>Hide</button>
+    </div>
+  );
+}
           `}
         </Code>
       </section>

@@ -5,6 +5,10 @@ import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 import Code from "../common/code/Code.common";
 
 const UseAuth = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Title>useAuth()</Title>
@@ -39,8 +43,8 @@ import { useAuth } from "react-uicomp";
 
 export default function() {
     
-    // logout function is available on state prop in <Auth.Provider>
-    const { logout } = useAuth();
+    // config and state can be accessed with useAuth()
+    const { isLoggedIn, userRole, logout } = useAuth();
     
     return () {
         // ...

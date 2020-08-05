@@ -5,6 +5,10 @@ import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 import Code from "../common/code/Code.common";
 
 const UseNavigation = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Title>useNavigation()</Title>
@@ -48,6 +52,7 @@ const UseNavigation = () => {
               available.
             </li>
           </ul>
+          <br />
           <li className="list__item">
             <span className="highlight">history ( object )</span> : History
             object provided by react-router-dom useHistory() hook.

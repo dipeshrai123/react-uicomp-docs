@@ -5,6 +5,10 @@ import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 import Code from "../common/code/Code.common";
 
 const WhyUse = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Title>Why Use React UI Comp ?</Title>

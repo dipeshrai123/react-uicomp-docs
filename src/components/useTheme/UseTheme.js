@@ -5,6 +5,10 @@ import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 import Code from "../common/code/Code.common";
 
 const UseTheme = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Title>useTheme()</Title>
@@ -15,15 +19,16 @@ const UseTheme = () => {
         </Paragraph>
         <ul className="list">
           <li className="list__item">
-            dark ( boolean ) : Either it is a light theme or dark theme.
+            <span className="highlight">dark ( boolean )</span> : Either it is a
+            light theme or dark theme.
           </li>
           <li className="list__item">
-            colors ( object ) : Various colors defined in{" "}
-            <b>{"<Theme.Provider>"}</b> HOC.
+            <span className="highlight">colors ( object )</span> : Various
+            colors defined in <b>{"<Theme.Provider>"}</b> HOC.
           </li>
           <li className="list__item">
-            toggleTheme ( function ) : Function which is passed in{" "}
-            {"<Theme.Provider>"} HOC.
+            <span className="highlight">toggleTheme ( function )</span> :
+            Function which is passed in {"<Theme.Provider>"} HOC.
           </li>
         </ul>
       </section>

@@ -4,6 +4,10 @@ import Paragraph from "../common/paragraph/Paragraph";
 import Code from "../common/code/Code.common";
 
 const AnimatedBlock = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Title>Animated Block</Title>

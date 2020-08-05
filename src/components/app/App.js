@@ -10,6 +10,7 @@ const App = () => {
 
   return (
     <Navigation.Provider
+      routerType="hash"
       publicPaths={PUBLIC_PATHS}
       privatePaths={[]}
       userRoles={{

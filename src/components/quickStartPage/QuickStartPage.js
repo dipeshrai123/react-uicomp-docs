@@ -43,8 +43,9 @@ const QuickStartPage = () => {
           React UI Comp 1.1.3 requires
           <b>
             {" "}
-            react 16.13.1 or later, react-dom 16.13.1 or later, react-router-dom
-            5.2.0 or later.
+            <span className="highlight">react 16.13.1</span> or later,{" "}
+            <span className="highlight">react-dom 16.13.1</span> or later,{" "}
+            <span className="highlight">react-router-dom 5.2.0</span> or later.
           </b>
         </Paragraph>
         <Paragraph>To use React UI Comp with your React App.</Paragraph>

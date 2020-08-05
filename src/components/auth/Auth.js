@@ -5,6 +5,10 @@ import Code from "../common/code/Code.common";
 import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 
 const Auth = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Title>Auth</Title>

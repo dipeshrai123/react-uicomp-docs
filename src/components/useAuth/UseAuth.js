@@ -39,8 +39,8 @@ import { useAuth } from "react-uicomp";
 
 export default function() {
     
-    // logout function is available on state prop in <Auth.Provider>
-    const { logout } = useAuth();
+    // config and state can be accessed with useAuth()
+    const { isLoggedIn, userRole, logout } = useAuth();
     
     return () {
         // ...

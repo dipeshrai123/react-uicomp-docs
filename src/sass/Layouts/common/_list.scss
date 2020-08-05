@@ -1,9 +1,14 @@
 .list {
-  margin: 0.5rem 0;
+  margin: 1.5rem 0;
   margin-left: 2rem;
+  &--nested {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+  }
   &__item {
     line-height: 1.5;
     margin: 0.1rem 0;
     font-size: $thin;
+    font-family: $avertaLight;
   }
 }

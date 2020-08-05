@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/react-uicomp-docs/static/css/main.fe9c1b80.chunk.css",
-    "main.js": "/react-uicomp-docs/static/js/main.3aaea969.chunk.js",
-    "main.js.map": "/react-uicomp-docs/static/js/main.3aaea969.chunk.js.map",
-    "runtime-main.js": "/react-uicomp-docs/static/js/runtime-main.62f31ff7.js",
-    "runtime-main.js.map": "/react-uicomp-docs/static/js/runtime-main.62f31ff7.js.map",
-    "static/css/2.aa61572a.chunk.css": "/react-uicomp-docs/static/css/2.aa61572a.chunk.css",
-    "static/js/2.8a0d0921.chunk.js": "/react-uicomp-docs/static/js/2.8a0d0921.chunk.js",
-    "static/js/2.8a0d0921.chunk.js.map": "/react-uicomp-docs/static/js/2.8a0d0921.chunk.js.map",
-    "index.html": "/react-uicomp-docs/index.html",
-    "precache-manifest.9c425926427c21710b101995320204fc.js": "/react-uicomp-docs/precache-manifest.9c425926427c21710b101995320204fc.js",
-    "service-worker.js": "/react-uicomp-docs/service-worker.js",
-    "static/css/2.aa61572a.chunk.css.map": "/react-uicomp-docs/static/css/2.aa61572a.chunk.css.map",
-    "static/css/main.fe9c1b80.chunk.css.map": "/react-uicomp-docs/static/css/main.fe9c1b80.chunk.css.map",
-    "static/js/2.8a0d0921.chunk.js.LICENSE": "/react-uicomp-docs/static/js/2.8a0d0921.chunk.js.LICENSE",
-    "static/media/main.scss": "/react-uicomp-docs/static/media/AvertaSemibold.2182b9b6.otf",
-    "static/media/Logo.png": "/react-uicomp-docs/static/media/Logo.a2929979.png"
+    "main.css": "/React-UIComp-Docs/static/css/main.5fe47fa9.chunk.css",
+    "main.js": "/React-UIComp-Docs/static/js/main.3aaea969.chunk.js",
+    "main.js.map": "/React-UIComp-Docs/static/js/main.3aaea969.chunk.js.map",
+    "runtime-main.js": "/React-UIComp-Docs/static/js/runtime-main.5367193f.js",
+    "runtime-main.js.map": "/React-UIComp-Docs/static/js/runtime-main.5367193f.js.map",
+    "static/css/2.aa61572a.chunk.css": "/React-UIComp-Docs/static/css/2.aa61572a.chunk.css",
+    "static/js/2.9733cc3b.chunk.js": "/React-UIComp-Docs/static/js/2.9733cc3b.chunk.js",
+    "static/js/2.9733cc3b.chunk.js.map": "/React-UIComp-Docs/static/js/2.9733cc3b.chunk.js.map",
+    "index.html": "/React-UIComp-Docs/index.html",
+    "precache-manifest.7ac9aa59c6ba7954565d2ec325ba1707.js": "/React-UIComp-Docs/precache-manifest.7ac9aa59c6ba7954565d2ec325ba1707.js",
+    "service-worker.js": "/React-UIComp-Docs/service-worker.js",
+    "static/css/2.aa61572a.chunk.css.map": "/React-UIComp-Docs/static/css/2.aa61572a.chunk.css.map",
+    "static/css/main.5fe47fa9.chunk.css.map": "/React-UIComp-Docs/static/css/main.5fe47fa9.chunk.css.map",
+    "static/js/2.9733cc3b.chunk.js.LICENSE": "/React-UIComp-Docs/static/js/2.9733cc3b.chunk.js.LICENSE",
+    "static/media/main.scss": "/React-UIComp-Docs/static/media/AvertaSemibold.2182b9b6.otf",
+    "static/media/Logo.png": "/React-UIComp-Docs/static/media/Logo.a2929979.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.62f31ff7.js",
+    "static/js/runtime-main.5367193f.js",
     "static/css/2.aa61572a.chunk.css",
-    "static/js/2.8a0d0921.chunk.js",
-    "static/css/main.fe9c1b80.chunk.css",
+    "static/js/2.9733cc3b.chunk.js",
+    "static/css/main.5fe47fa9.chunk.css",
     "static/js/main.3aaea969.chunk.js"
   ]
 }

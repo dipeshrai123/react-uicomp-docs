@@ -2,8 +2,7 @@ import React from "react";
 import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
 import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
-import Code from "../common/code/Code.common";
-import InterpolateExample from "../demos/interpolate";
+import FacebookReaction from "../demos/facebookReaction";
 
 const WhyUse = () => {
   React.useEffect(() => {
@@ -87,40 +86,6 @@ const WhyUse = () => {
           define all those routing in a single component without any headache.
         </Paragraph>
       </section>
-      <section>
-        <SecondaryTitle>Basic Usage</SecondaryTitle>
-        <Code>
-          {`
-// import Auth from here
-import { Navigation, Auth } from "react-uicomp";
-
-...
-
-const App = () => {
-  const [config, setConfig] = useState({ isLoggedIn: false, userRole: "user" });
-
-  return (
-    <Navigation.Provider
-      publicPaths={publicPaths}
-      privatePaths={privatePaths}
-      userRoles={userRoles}
-    >
-      <Auth.Provider
-        config={config}
-        state={{
-          logout: () => {
-            setConfig({ isLoggedIn: false, userRole: "user" });
-          }
-        }}
-      >
-        <Auth.Screens />
-      </Auth.Provider>
-    </Navigation.Provider>
-  );
-};
-          `}
-        </Code>
-      </section>
 
       <section>
         <SecondaryTitle>For Animation</SecondaryTitle>
@@ -141,45 +106,9 @@ const App = () => {
       </section>
 
       <section>
-        <SecondaryTitle>Demo</SecondaryTitle>
+        <SecondaryTitle>Demo ( Animated Reaction )</SecondaryTitle>
 
-        <InterpolateExample />
-      </section>
-      <section>
-        <SecondaryTitle>Example</SecondaryTitle>
-        <Code>
-          {`
-import React from "react";
-import { AnimatedBlock, useAnimatedValue, interpolate } from "react-uicomp";
-
-export default function Interpolate() {
-  const opacity = useAnimatedValue(1);
-
-  return (
-    <div>
-      <AnimatedBlock
-        style={{
-          width: 100,
-          height: 100,
-          borderRadius: 4,
-          background: "#39F",
-          opacity: opacity.value,
-          // We are interpolating the transform scale property
-          transform: interpolate(opacity.value, {
-            inputRange: [0, 1],
-            outputRange: ["scale(0.5)", "scale(1)"],
-            extrapolate: "clamp",
-          }),
-        }}
-      />
-      <br />
-      <button onClick={() => (opacity.value = 1)}>Show</button>
-      <button onClick={() => (opacity.value = 0)}>Hide</button>
-    </div>
-  );
-}
-          `}
-        </Code>
+        <FacebookReaction />
       </section>
     </div>
   );

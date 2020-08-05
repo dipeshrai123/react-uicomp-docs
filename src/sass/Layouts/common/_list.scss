@@ -5,10 +5,13 @@
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
   }
+  &--alpha {
+    list-style-type: lower-alpha;
+  }
   &__item {
     line-height: 1.5;
     margin: 0.1rem 0;
-    font-size: $thin;
+    font-size: $extrathin;
     font-family: $avertaLight;
   }
 }

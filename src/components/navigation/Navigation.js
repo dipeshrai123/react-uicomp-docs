@@ -60,7 +60,7 @@ const Navigation = () => {
             </span>{" "}
             accepts an array of object with following keys:
           </li>
-          <ol className="list list--nested">
+          <ol className="list list--nested list--alpha">
             <li className="list__item">
               <span className="highlight">key ( string )</span> : Unique key to
               access using useNavigation() hook.
@@ -88,7 +88,7 @@ const Navigation = () => {
             </span>{" "}
             accepts an array of object with following keys:
           </li>
-          <ol className="list list--nested">
+          <ol className="list list--nested  list--alpha">
             <li className="list__item">
               <span className="highlight">key ( string )</span> : Unique key to
               access using useNavigation() hook.

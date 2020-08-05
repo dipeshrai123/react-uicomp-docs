@@ -1,7 +1,80 @@
 import React from "react";
+import Title from "../common/title/Title";
+import Paragraph from "../common/paragraph/Paragraph";
+import Code from "../common/code/Code.common";
 
 const Auth = () => {
-  return "Auth";
+  return (
+    <div>
+      <Title>Auth</Title>
+      <section>
+        <Paragraph>
+          Auth provides 2 different HOCs which handles all the authentications
+          defined by {"<Navigation.Provider>"} HOC.
+        </Paragraph>
+      </section>
+      <ol className="list">
+        <li className="list__item">
+          <Paragraph>
+            <b>Auth.Provider</b>
+            <br />
+            It lets you define the current state of a user i.e. ( logged state
+            and logged role ) and allows us to define global state which can be
+            accessed from any component with useAuth() hook.
+          </Paragraph>
+          <Paragraph>It accepts two props :</Paragraph>
+          <ol className="list list--nested list--alpha">
+            <li className="list__item">
+              <b>config</b> (object)
+              <br />
+              You must pass an config object to config prop. Object should be of
+              following shape :
+            </li>
+            <ul className="list list--nested">
+              <li className="list__item">
+                isLoggedIn ( boolean ) : Defines logged state of a user
+              </li>
+              <li className="list__item">
+                isLoggedIn ( boolean ) : Defines logged state of a user
+              </li>
+            </ul>
+            <li className="list__item">
+              <b>state ( object )</b>
+              <br />
+              It can be used as a global state which can accept any object with
+              any keys. It is mostly used to change the config state. For
+              example: state object could be an object with handleLogout method
+              which modifies the isLoggedIn key defined in config object.
+            </li>
+          </ol>
+        </li>
+        <li className="list__item">
+          <Paragraph>
+            <b>Auth.Screens</b>
+            <br />
+            It returns all the authenticated screens based on the current state
+            of a user and all the routes provided to{" "}
+            <b>{"<Navigation.Provider>"} </b>
+            HOC.
+          </Paragraph>
+          <Paragraph>
+            Hierarchy of Routing should be:
+            <Code>
+              {`
+<Navigation.Provider {...{ ...propsToThis }}>
+  <Auth.Provider {...{ ...propsToThis }}>
+    <Auth.Screens {...{ ...propsToThis }}/>
+  </Auth.Provider>
+</Navigation.Provider>
+              `}
+            </Code>
+            Navigation.Provider should be wrapping all other HOCs. Auth.Provider
+            should wrap Auth.Screens.
+          </Paragraph>
+        </li>
+      </ol>
+    </div>
+  );
 };
 
 export default Auth;

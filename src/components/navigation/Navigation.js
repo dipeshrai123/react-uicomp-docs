@@ -57,7 +57,7 @@ const Navigation = () => {
           <li className="list__item">
             <b>publicPaths</b> accepts an array of object with following keys:
           </li>
-          <ol className="list list--nested">
+          <ol className="list list--nested list--alpha">
             <li className="list__item">
               key ( string ) : Unique key to access using useNavigation() hook.
             </li>
@@ -78,7 +78,7 @@ const Navigation = () => {
           <li className="list__item">
             <b>privatePaths</b> accepts an array of object with following keys:
           </li>
-          <ol className="list list--nested">
+          <ol className="list list--nested  list--alpha">
             <li className="list__item">
               key ( string ) : Unique key to access using useNavigation() hook.
             </li>

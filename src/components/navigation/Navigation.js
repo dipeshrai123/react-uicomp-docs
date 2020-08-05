@@ -100,6 +100,57 @@ const Navigation = () => {
           </li>
         </ol>
       </section>
+      <section>
+        <SecondaryTitle>Example</SecondaryTitle>
+        <Code>
+          {`
+import React from "react";
+import { Navigation } from "react-uicomp";
+import { Page1, Page2 } from "./Pages";
+
+// Array of object having key, name, path, component and restricted.
+const publicPaths = [
+  {
+    key: "Public",
+    name: "Public",
+    path: "/public",
+    component: Page1,
+    restricted: true,
+  },
+];
+
+// Array of object having key, name, path and component.
+const privatePaths = [
+  {
+    key: "Private",
+    name: "Private",
+    path: "/private",
+    component: Page2,
+  },
+];
+
+// Define user role and provide access routes.
+const userRoles = { 
+    user: { access: ["/public"] }, 
+    admin:  { access: ["/public", "/private"] },
+};
+
+const App = () => {
+  return (
+    <Navigation.Provider
+      publicPaths={publicPaths}
+      privatePaths={privatePaths}
+      userRoles={userRoles}
+    >
+      // ...
+    </Navigation.Provider>
+  );
+};
+
+export default App;
+          `}
+        </Code>
+      </section>
     </div>
   );
 };

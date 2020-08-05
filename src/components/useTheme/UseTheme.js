@@ -1,6 +1,8 @@
 import React from "react";
 import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
+import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
+import Code from "../common/code/Code.common";
 
 const UseTheme = () => {
   return (
@@ -24,6 +26,28 @@ const UseTheme = () => {
             {"<Theme.Provider>"} HOC.
           </li>
         </ul>
+      </section>
+      <section>
+        <SecondaryTitle>Example</SecondaryTitle>
+        <Code>
+          {`
+// import useTheme
+import { useTheme } from "react-uicomp";
+
+export default function() {
+    
+    // It has theme object and toggleTheme function
+    const { colors, toggleTheme } = useTheme();
+    
+    return () {
+        {/* use it like this which is changed automatically when toggleTheme function is called */}
+        <div style={{ color: colors.primaryColor }}>
+        	Paragraph Text
+        </div>
+    }
+}
+          `}
+        </Code>
       </section>
     </div>
   );

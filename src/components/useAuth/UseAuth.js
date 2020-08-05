@@ -1,6 +1,8 @@
 import React from "react";
 import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
+import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
+import Code from "../common/code/Code.common";
 
 const UseAuth = () => {
   return (
@@ -27,6 +29,25 @@ const UseAuth = () => {
             If you want to handle login and logout.
           </li>
         </ul>
+      </section>
+      <section>
+        <SecondaryTitle>Example</SecondaryTitle>
+        <Code>
+          {`
+// import useAuth
+import { useAuth } from "react-uicomp";
+
+export default function() {
+    
+    // logout function is available on state prop in <Auth.Provider>
+    const { logout } = useAuth();
+    
+    return () {
+        // ...
+    }
+}
+          `}
+        </Code>
       </section>
     </div>
   );

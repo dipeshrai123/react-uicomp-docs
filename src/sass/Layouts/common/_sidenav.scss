@@ -18,26 +18,38 @@
     font-size: $thin;
     font-family: $avertaSemiBold;
     cursor: pointer;
+    color: $black;
   }
 
   &__navitems {
-    padding-left: 15px;
+    padding-left: 10px;
     list-style: none;
     margin-top: 5px;
   }
 
   &__navitem {
     font-size: $extrathin;
-    padding: 5px 0;
     font-family: $avertaLight;
+    font-weight: bold;
+    padding: 2px 0px;
+    color: $black;
   }
 
   &__navlink {
     text-decoration: none;
-    color: $black;
+    color: $light_black;
+    display: block;
+    border-radius: 4px;
+    padding: 8px 10px;
+    transition: background .2s, color .2s;
+
+    &:hover {
+      background: $highlight_blue;
+    }
 
     &--active {
       color: $blue;
+      background: $highlight_blue;
     }
   }
 }

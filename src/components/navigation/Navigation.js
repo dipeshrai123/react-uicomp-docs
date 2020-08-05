@@ -11,10 +11,7 @@ const Navigation = () => {
 
   return (
     <div>
-      <Title>
-        Navigation : Define routes (public, private and protected) and user
-        roles.
-      </Title>
+      <Title>Navigation</Title>
       <section>
         <Paragraph>
           Navigation lets you define all the routes (public, private and

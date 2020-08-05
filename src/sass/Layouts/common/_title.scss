@@ -2,8 +2,11 @@
   margin-bottom: 20px;
   font-size: $large;
   font-family: $avertaSemiBold;
+  color: $black;
+
   &--secondary {
     margin: 2rem 0 1rem 0;
-    font-size: $medium;
+    font-size: $extrasmall;
+    color: $black;
   }
 }

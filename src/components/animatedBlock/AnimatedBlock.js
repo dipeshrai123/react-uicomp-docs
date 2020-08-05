@@ -2,6 +2,7 @@ import React from "react";
 import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
 import Code from "../common/code/Code.common";
+import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 
 const AnimatedBlock = () => {
   React.useEffect(() => {
@@ -19,6 +20,7 @@ const AnimatedBlock = () => {
           all properties of the <b>{"<div>"}</b> element and it can accept the
           animated nodes returned from useAnimatedValue() hook.
         </Paragraph>
+        <SecondaryTitle>Example</SecondaryTitle>
         <Code>
           {`
 import { AnimatedBlock, useAnimatedValue } from "react-uicomp";

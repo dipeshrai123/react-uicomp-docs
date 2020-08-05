@@ -25,6 +25,13 @@ span.highlight {
   background-color: lighten(#3399ff, 35%);
   border-radius: 4px;
   padding: 0px 6px;
+  font-family: $avertaSemiBold;
+  border: 1px solid lighten(#3399ff, 30%);
+}
+
+b {
+  font-family: $avertaSemiBold;
+  color: $black;
 }
 
 // BACKGROUND STYLES

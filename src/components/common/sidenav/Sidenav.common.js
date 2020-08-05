@@ -16,8 +16,7 @@ const Sidenav = () => {
         title="Routing"
         navItems={[
           {
-            name:
-              "Navigation : Define routes (public, private and protected) and user roles.",
+            name: "Navigation",
             link: "/navigation",
           },
           { name: "Auth", link: "/auth" },

@@ -37,7 +37,9 @@ const UseAnimatedValue = () => {
           We can change the opacity.value to 1 if a user clicks a button. It
           auto animates the value from 0 to 1.
         </Paragraph>
-        <Code>{"onClick = () => (opacity.value = 1)"}</Code>
+        <Code>
+          {"<button onClick = { () => opacity.value = 1 }>Click Me</button>"}
+        </Code>
       </section>
       <section>
         <SecondaryTitle>Example</SecondaryTitle>

@@ -55,48 +55,65 @@ const Navigation = () => {
         </Paragraph>
         <ol className="list">
           <li className="list__item">
-            <b>publicPaths</b> accepts an array of object with following keys:
+            <span className="highlight">
+              <b>publicPaths</b>
+            </span>{" "}
+            accepts an array of object with following keys:
           </li>
           <ol className="list list--nested">
             <li className="list__item">
-              key ( string ) : Unique key to access using useNavigation() hook.
+              <span className="highlight">key ( string )</span> : Unique key to
+              access using useNavigation() hook.
             </li>
             <li className="list__item">
-              name ( string ) : Defines the name for a path
+              <span className="highlight">name ( string )</span> : Defines the
+              name for a path
             </li>
             <li className="list__item">
-              path ( string ) : Defines the path for a component
+              <span className="highlight">path ( string )</span> : Defines the
+              path for a component
             </li>
             <li className="list__item">
-              component ( Component ) : Defines a component for a path
+              <span className="highlight">component ( Component )</span> :
+              Defines a component for a path
             </li>
             <li className="list__item">
-              restricted ( boolean ) : If true then it is protected route
-              otherwise public
+              <span className="highlight">restricted ( boolean )</span> : If
+              true then it is protected route otherwise public
             </li>
           </ol>
           <li className="list__item">
-            <b>privatePaths</b> accepts an array of object with following keys:
+            <span className="highlight">
+              <b>privatePaths</b>
+            </span>{" "}
+            accepts an array of object with following keys:
           </li>
           <ol className="list list--nested">
             <li className="list__item">
-              key ( string ) : Unique key to access using useNavigation() hook.
+              <span className="highlight">key ( string )</span> : Unique key to
+              access using useNavigation() hook.
             </li>
             <li className="list__item">
-              name ( string ) : Defines the name for a path
+              <span className="highlight">name ( string )</span> : Defines the
+              name for a path
             </li>
             <li className="list__item">
-              path ( string ) : Defines the path for a component
+              <span className="highlight">path ( string )</span> : Defines the
+              path for a component
             </li>
             <li className="list__item">
-              component ( Component ) : Defines a component for a path
+              <span className="highlight">component ( Component )</span> :
+              Defines a component for a path
             </li>
           </ol>
           <li className="list__item">
-            <b>userRoles</b> accepts an object with any number of keys which
-            defines the access routes for a user. <br />
+            <span className="highlight">
+              <b>userRoles</b>
+            </span>{" "}
+            accepts an object with any number of keys which defines the access
+            routes for a user. <br />
             Format of userRoles object is: <br />{" "}
-            <Code>{"{ [role] : access: Array of paths }"}</Code>
+            <Code>{"{ [role] : { access: Array of paths } }"}</Code>
           </li>
         </ol>
       </section>

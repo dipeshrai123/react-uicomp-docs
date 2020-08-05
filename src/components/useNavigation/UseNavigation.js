@@ -20,8 +20,9 @@ const UseNavigation = () => {
         </Paragraph>
         <ul className="list">
           <li className="list__item">
-            navigation ( object ) : Object for handling navigation and provides
-            all authenticated routes name and path
+            <span className="highlight">navigation ( object )</span> : Object
+            for handling navigation and provides all authenticated routes name
+            and path
           </li>
           <ul className="list list--nested">
             <li className="list__item">
@@ -31,30 +32,31 @@ const UseNavigation = () => {
               and path for a defined key.
             </li>
             <li className="list__item">
-              navigate ( function ) : Function which takes either string or an
-              object similar to <b>react-router-dom</b>’s history.push()
-              function.
+              <span className="highlight">navigate ( function )</span> :
+              Function which takes either string or an object similar to{" "}
+              <b>react-router-dom</b>’s history.push() function.
             </li>
             <li className="list__item">
-              goBack ( function ) : Function which will navigate to the previous
-              screen.
+              <span className="highlight">goBack ( function )</span> : Function
+              which will navigate to the previous screen.
             </li>
             <li className="list__item">
-              goForward ( function ) : Function which will navigate to the next
-              screen if history is available.
+              <span className="highlight">goForward ( function )</span> :
+              Function which will navigate to the next screen if history is
+              available.
             </li>
           </ul>
           <li className="list__item">
-            history ( object ) : History object provided by react-router-dom
-            useHistory() hook.
+            <span className="highlight">history ( object )</span> : History
+            object provided by react-router-dom useHistory() hook.
           </li>
           <li className="list__item">
-            location ( object ) : History object provided by react-router-dom
-            useLocation() hook.
+            <span className="highlight">location ( object )</span> : History
+            object provided by react-router-dom useLocation() hook.
           </li>
           <li className="list__item">
-            params ( object ) : History object provided by react-router-dom
-            useParams() hook.
+            <span className="highlight">params ( object )</span> : History
+            object provided by react-router-dom useParams() hook.
           </li>
         </ul>
       </section>

@@ -46,6 +46,14 @@ const Sidenav = () => {
             link: "/docs/use-animated-value",
           },
           { name: "AnimatedBlock", link: "/docs/animated-block" },
+          { name: "interpolate()", link: "/docs/interpolate" },
+          { name: "binaryInterpolate()", link: "/docs/binary-interpolate" },
+          { name: "useScroll()", link: "/docs/use-scroll" },
+          { name: "useMeasure()", link: "/docs/use-measure" },
+          { name: "useMouseMove()", link: "/docs/use-mousemove" },
+          { name: "useDrag()", link: "/docs/use-drag" },
+          { name: "useWindowDimension()", link: "/docs/use-window-dimension" },
+          { name: "useOutsideClick()", link: "/docs/use-outside-click" },
         ]}
       />
     </div>

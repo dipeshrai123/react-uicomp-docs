@@ -46,6 +46,7 @@ const UseNavigation = () => {
               available.
             </li>
           </ul>
+          <br />
           <li className="list__item">
             <span className="highlight">history ( object )</span> : History
             object provided by react-router-dom useHistory() hook.

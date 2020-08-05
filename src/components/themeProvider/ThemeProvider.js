@@ -23,19 +23,35 @@ const ThemeProvider = () => {
         </Paragraph>
         <ul className="list">
           <li className="list__item">
-            dark ( boolean ) : Either it is a light theme or dark theme.
+            <span className="highlight">dark ( boolean )</span> : Either it is a
+            light theme or dark theme.
           </li>
           <li className="list__item">
-            colors ( object ) : Various colors to define a particular theme.
+            <span className="highlight">colors ( object )</span> : Various
+            colors to define a particular theme.
           </li>
           <ul className="list list--nested">
-            <li className="list__item"> backgroundColor ( string )</li>
-            <li className="list__item">primaryColor ( string )</li>
-            <li className="list__item">secondaryColor ( string )</li>
-            <li className="list__item">highlightColor ( string )</li>
-            <li className="list__item">textColor ( string )</li>
-            <li className="list__item">borderColor ( string )</li>
-            <li className="list__item">cardColor ( string </li>
+            <li className="list__item">
+              <span className="highlight">backgroundColor ( string )</span>
+            </li>
+            <li className="list__item">
+              <span className="highlight">primaryColor ( string )</span>
+            </li>
+            <li className="list__item">
+              <span className="highlight">secondaryColor ( string )</span>
+            </li>
+            <li className="list__item">
+              <span className="highlight">highlightColor ( string )</span>
+            </li>
+            <li className="list__item">
+              <span className="highlight">textColor ( string )</span>
+            </li>
+            <li className="list__item">
+              <span className="highlight">borderColor ( string )</span>
+            </li>
+            <li className="list__item">
+              <span className="highlight">cardColor ( string )</span>
+            </li>
           </ul>
         </ul>
       </section>

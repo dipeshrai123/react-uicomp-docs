@@ -14,15 +14,17 @@ const UseNavigation = () => {
       <Title>useNavigation()</Title>
       <section>
         <Paragraph>
-          useNavigation() is a hook which gives access to the navigation object
-          providing you to navigate between different screens, providing you all
-          accessible routes according to the current state of a user ( logged
-          state and logged role ). It is also very useful for a component which
-          is not directly a route defined in public or private paths because it
-          doesn't have access to history prop directly.
+          <span className="highlight">useNavigation()</span> is a hook which
+          gives access to the navigation object providing you to navigate
+          between different screens, providing you all accessible routes
+          according to the current state of a user ( logged state and logged
+          role ). It is also very useful for a component which is not directly a
+          route defined in public or private paths because it doesn't have
+          access to history prop directly.
         </Paragraph>
         <Paragraph>
-          useNavigation() returns an object with the following properties :
+          <span className="highlight">useNavigation()</span> returns an object
+          with the following properties :
         </Paragraph>
         <ul className="list">
           <li className="list__item">

@@ -3,6 +3,7 @@ import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
 import Code from "../common/code/Code.common";
 import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
+import UseAnimatedValueExample from "../demos/useAnimatedValue";
 
 const AnimatedBlock = () => {
   React.useEffect(() => {
@@ -11,43 +12,50 @@ const AnimatedBlock = () => {
 
   return (
     <div>
-      <Title>Animated Block</Title>
+      <Title>AnimatedBlock</Title>
       <section>
         <Paragraph>
-          Animated Node returned from useAnimatedValue() hook is not directly
-          read by HTMLElement. It needs a special type of element that can read
-          it. So, we have an <b>{"<AnimatedBlock>"}</b> component which inherits
-          all properties of the <b>{"<div>"}</b> element and it can accept the
-          animated nodes returned from useAnimatedValue() hook.
+          Animated Node returned from{" "}
+          <span className="highlight">useAnimatedValue()</span> hook is not
+          directly read by <span className="highlight">HTMLElement</span>. It
+          needs a special type of element that can read it. So, we have an{" "}
+          <span className="highlight">{"<AnimatedBlock>"}</span> component which
+          inherits all properties of the{" "}
+          <span className="highlight">{"<div>"}</span> element and it can accept
+          the animated nodes returned from{" "}
+          <span className="highlight">useAnimatedValue()</span> hook.
         </Paragraph>
+        <section>
+          <SecondaryTitle>Demo</SecondaryTitle>
+
+          <UseAnimatedValueExample />
+        </section>
         <SecondaryTitle>Example</SecondaryTitle>
         <Code>
           {`
+import React from "react";
 import { AnimatedBlock, useAnimatedValue } from "react-uicomp";
 
-export default function() {
-  const opacity = useAnimatedValue(0); // It initializes opacity object with value 0.
+export default function UseAnimatedValue() {
+  const opacity = useAnimatedValue(1);
 
   return (
-      <div>
-          {/* AnimatedBlock component should be used with useAnimatedValue() */}
-          <AnimatedBlock 
-            style={{
-              opacity: opacity.value, // value property should be passed
-              width: 100,
-              padding: 20,
-              background: "#39F",
-            }}
-          >
-            ANIMATED
-          </AnimatedBlock>
-          
-          {/* Animating from 0 to 1 is very simple just assign opacity.value = 1 */}
-          <button onClick={() => opacity.value = 1}>Animate Me</button>
-      </div>
+    <div>
+      <AnimatedBlock
+        style={{
+          width: 100,
+          height: 100,
+          borderRadius: 4,
+          background: "#39F",
+          opacity: opacity.value,
+        }}
+      />
+      <br />
+      <button onClick={() => (opacity.value = 1)}>Show</button>
+      <button onClick={() => (opacity.value = 0)}>Hide</button>
+    </div>
   );
 }
-
        `}
         </Code>
       </section>

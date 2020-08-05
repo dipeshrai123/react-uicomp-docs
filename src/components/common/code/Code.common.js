@@ -5,7 +5,12 @@ import Prism from "prismjs";
 export default function Code({ children }) {
   useLayoutEffect(() => Prism.highlightAll(), []);
   return (
-    <pre className="line-numbers">
+    <pre
+      className="line-numbers"
+      style={{
+        borderRadius: 4,
+      }}
+    >
       <code className="language-js">{children.trim()}</code>
     </pre>
   );

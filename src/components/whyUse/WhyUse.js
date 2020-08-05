@@ -2,7 +2,7 @@ import React from "react";
 import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
 import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
-import Code from "../common/code/Code.common";
+import FacebookReaction from "../demos/facebookReaction";
 
 const WhyUse = () => {
   React.useEffect(() => {
@@ -21,6 +21,8 @@ const WhyUse = () => {
           components that allows you to create beautiful UI Components and
           animation very easily.
         </Paragraph>
+
+        <SecondaryTitle>For Routing</SecondaryTitle>
         <Paragraph>
           Let’s say you want to create a dashboard which should have different
           users who can access it. Suppose <b>ROLE_A, ROLE_B</b> and{" "}
@@ -84,39 +86,29 @@ const WhyUse = () => {
           define all those routing in a single component without any headache.
         </Paragraph>
       </section>
+
       <section>
-        <SecondaryTitle>Basic Usage</SecondaryTitle>
-        <Code>
-          {`
-// import Auth from here
-import { Navigation, Auth } from "react-uicomp";
+        <SecondaryTitle>For Animation</SecondaryTitle>
 
-...
+        <Paragraph>
+          Let's take an example from the previous section. The box changes its
+          <span className="highlight">opacity</span> to{" "}
+          <span className="highlight">0</span> when we click the hide button and
+          to <span className="highlight">1</span> when we click the show button.
+          We also want the box to shrink to{" "}
+          <span className="highlight">.5</span> scale if{" "}
+          <span className="highlight">opacity</span> is
+          <span className="highlight">0</span> and to{" "}
+          <span className="highlight">1</span> if{" "}
+          <span className="highlight">opacity</span> is{" "}
+          <span className="highlight">1</span>.
+        </Paragraph>
+      </section>
 
-const App = () => {
-  const [config, setConfig] = useState({ isLoggedIn: false, userRole: "user" });
+      <section>
+        <SecondaryTitle>Demo ( Animated Reaction )</SecondaryTitle>
 
-  return (
-    <Navigation.Provider
-      publicPaths={publicPaths}
-      privatePaths={privatePaths}
-      userRoles={userRoles}
-    >
-      <Auth.Provider
-        config={config}
-        state={{
-          logout: () => {
-            setConfig({ isLoggedIn: false, userRole: "user" });
-          }
-        }}
-      >
-        <Auth.Screens />
-      </Auth.Provider>
-    </Navigation.Provider>
-  );
-};
-          `}
-        </Code>
+        <FacebookReaction />
       </section>
     </div>
   );

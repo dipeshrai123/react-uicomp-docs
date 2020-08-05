@@ -1,10 +1,5 @@
-import React, { useState } from "react";
-import {
-  useMeasure,
-  ActiveLink,
-  AnimatedBlock,
-  useAnimatedValue,
-} from "react-uicomp";
+import React from "react";
+import { ActiveLink } from "react-uicomp";
 
 const NavGroup = ({ title, navItems }) => {
   // const { handler, height } = useMeasure();

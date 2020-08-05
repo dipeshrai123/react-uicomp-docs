@@ -14,8 +14,9 @@ const UseTheme = () => {
       <Title>useTheme()</Title>
       <section>
         <Paragraph>
-          useTheme() returns an object which provides current active theme and
-          toggleTheme function. The object consists of following properties :
+          <span className="highlight">useTheme()</span> returns an object which
+          provides current active theme and toggleTheme function. The object
+          consists of following properties :
         </Paragraph>
         <ul className="list">
           <li className="list__item">
@@ -24,11 +25,13 @@ const UseTheme = () => {
           </li>
           <li className="list__item">
             <span className="highlight">colors ( object )</span> : Various
-            colors defined in <b>{"<Theme.Provider>"}</b> HOC.
+            colors defined in{" "}
+            <span className="highlight">{"<Theme.Provider>"}</span> HOC.
           </li>
           <li className="list__item">
             <span className="highlight">toggleTheme ( function )</span> :
-            Function which is passed in {"<Theme.Provider>"} HOC.
+            Function which is passed in{" "}
+            <span className="highlight">{"<Theme.Provider>"}</span> HOC.
           </li>
         </ul>
       </section>

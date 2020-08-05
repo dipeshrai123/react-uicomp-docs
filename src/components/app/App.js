@@ -12,7 +12,9 @@ const App = () => {
     <Navigation.Provider
       publicPaths={PUBLIC_PATHS}
       privatePaths={[]}
-      userRoles={{ user: { access: ["/", "/quick-start", "/why-use"] } }}
+      userRoles={{
+        user: { access: ["/", "/quick-start", "/why-use-react-uicomp"] },
+      }}
     >
       <Auth.Provider config={config}>
         <Header />

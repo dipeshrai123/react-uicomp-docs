@@ -17,4 +17,3 @@ ReactDOM.render(
   </Provider>,
   document.querySelector("#root")
 );
-setTimeout(Prism.highlightAll(), 0);

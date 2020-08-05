@@ -9,7 +9,7 @@ const Sidenav = () => {
         title="Introduction"
         navItems={[
           { name: "Quick Start", link: "/quick-start" },
-          { name: "Why use React UI Comp?", link: "/why-use" },
+          { name: "Why use React UI Comp?", link: "/why-use-react-uicomp" },
         ]}
       />
     </div>

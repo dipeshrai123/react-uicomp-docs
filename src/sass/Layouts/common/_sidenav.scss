@@ -4,7 +4,7 @@
   height: 100%;
   background-color: $white;
   z-index: 9;
-  box-shadow: 2px 0px 2px $grey;
+  border-right: 1px solid $defaultborder;
   padding: 20px;
   top: 75px;
 
@@ -13,8 +13,9 @@
   }
 
   &__title {
-    font-size: $extrasmall;
+    font-size: $thin;
     font-family: $avertaSemiBold;
+    cursor: pointer;
   }
 
   &__navitems {
@@ -24,7 +25,7 @@
   }
 
   &__navitem {
-    font-size: $thin;
+    font-size: $extrathin;
     padding: 5px 0;
   }
 

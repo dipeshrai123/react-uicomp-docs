@@ -3,6 +3,7 @@ import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
 import Code from "../common/code/Code.common";
 import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
+import UseAnimatedValueExample from "../demos/useAnimatedValue";
 
 const AnimatedBlock = () => {
   React.useEffect(() => {
@@ -24,6 +25,11 @@ const AnimatedBlock = () => {
           the animated nodes returned from{" "}
           <span className="highlight">useAnimatedValue()</span> hook.
         </Paragraph>
+        <section>
+          <SecondaryTitle>Demo</SecondaryTitle>
+
+          <UseAnimatedValueExample />
+        </section>
         <SecondaryTitle>Example</SecondaryTitle>
         <Code>
           {`

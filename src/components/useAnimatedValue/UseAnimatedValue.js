@@ -3,6 +3,7 @@ import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
 import Code from "../common/code/Code.common";
 import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
+import UseAnimatedValueExample from "../demos/useAnimatedValue";
 
 const UseAnimatedValue = () => {
   React.useEffect(() => {
@@ -48,6 +49,11 @@ const UseAnimatedValue = () => {
         <Code>
           {"<button onClick = { () => opacity.value = 1 }>Click Me</button>"}
         </Code>
+      </section>
+      <section>
+        <SecondaryTitle>Demo</SecondaryTitle>
+
+        <UseAnimatedValueExample />
       </section>
       <section>
         <SecondaryTitle>Example</SecondaryTitle>

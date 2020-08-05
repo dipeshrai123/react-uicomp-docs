@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { AnimatedBlock, useAnimatedValue } from "react-uicomp";
 
 export default function UseAnimatedValue() {
-  const [on, setOn] = useState(true);
-  const opacity = useAnimatedValue(on ? 1 : 0);
+  const opacity = useAnimatedValue(1);
 
   return (
     <div>
@@ -17,7 +16,8 @@ export default function UseAnimatedValue() {
         }}
       />
       <br />
-      <button onClick={() => setOn((prev) => !prev)}>Toggle Opacity</button>
+      <button onClick={() => (opacity.value = 1)}>Show</button>
+      <button onClick={() => (opacity.value = 0)}>Hide</button>
     </div>
   );
 }

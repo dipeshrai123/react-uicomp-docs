@@ -32,22 +32,22 @@ const UseAnimatedValue = () => {
           Let us define an animated value called{" "}
           <span className="highlight">opacity</span>.
         </Paragraph>
-        <Code>const opacity = useAnimatedValue(0)</Code>
+        <Code>const opacity = useAnimatedValue(1)</Code>
         <Paragraph>
           Here we create an animated node called{" "}
           <span className="highlight">opacity</span> at an initial value initial
-          value <span className="highlight">0</span>. And opacity has a property
+          value <span className="highlight">1</span>. And opacity has a property
           called <span className="highlight">value</span>. At any time we set
-          opacity.value to some number then it changes its value from 0 to that
+          opacity.value to some number then it changes its value from 1 to that
           number.
         </Paragraph>
         <Paragraph>
           We can change the <span className="highlight">opacity.value</span> to{" "}
-          <span className="highlight">1</span> if a user clicks a button. It
-          auto animates the value from 0 to 1.
+          <span className="highlight">0</span> if a user clicks a button. It
+          auto animates the value from 1 to 0.
         </Paragraph>
         <Code>
-          {"<button onClick = { () => opacity.value = 1 }>Click Me</button>"}
+          {"<button onClick = { () => opacity.value = 0 }>Hide</button>"}
         </Code>
       </section>
       <section>
@@ -59,28 +59,27 @@ const UseAnimatedValue = () => {
         <SecondaryTitle>Example</SecondaryTitle>
         <Code>
           {`
+import React from "react";
 import { AnimatedBlock, useAnimatedValue } from "react-uicomp";
 
-export default function() {
-  const opacity = useAnimatedValue(0); // It initializes opacity object with value 0.
+export default function UseAnimatedValue() {
+  const opacity = useAnimatedValue(1);
 
   return (
-      <div>
-          {/* AnimatedBlock component should be used with useAnimatedValue() */}
-          <AnimatedBlock 
-            style={{
-              opacity: opacity.value, // value property should be passed
-              width: 100,
-              padding: 20,
-              background: "#39F",
-            }}
-          >
-            ANIMATED
-          </AnimatedBlock>
-          
-          {/* Animating from 0 to 1 is very simple just assign opacity.value = 1 */}
-          <button onClick={() => opacity.value = 1}>Animate Me</button>
-      </div>
+    <div>
+      <AnimatedBlock
+        style={{
+          width: 100,
+          height: 100,
+          borderRadius: 4,
+          background: "#39F",
+          opacity: opacity.value,
+        }}
+      />
+      <br />
+      <button onClick={() => (opacity.value = 1)}>Show</button>
+      <button onClick={() => (opacity.value = 0)}>Hide</button>
+    </div>
   );
 }
           `}

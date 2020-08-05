@@ -22,7 +22,7 @@
 }
 
 span.highlight {
-  background-color: $defaultborder;
+  background-color: lighten(#3399ff, 35%);
   border-radius: 4px;
   padding: 0px 6px;
 }

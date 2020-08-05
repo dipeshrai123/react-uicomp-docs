@@ -8,8 +8,11 @@ const Sidenav = () => {
       <NavGroup
         title="Introduction"
         navItems={[
-          { name: "Quick Start", link: "/quick-start" },
-          { name: "Why use React UI Comp?", link: "/why-use-react-uicomp" },
+          { name: "Quick Start", link: "/docs/quick-start" },
+          {
+            name: "Why use React UI Comp?",
+            link: "/docs/why-use-react-uicomp",
+          },
         ]}
       />
       <NavGroup
@@ -17,11 +20,11 @@ const Sidenav = () => {
         navItems={[
           {
             name: "Navigation",
-            link: "/navigation",
+            link: "/docs/navigation",
           },
-          { name: "Auth", link: "/auth" },
-          { name: "useNavigation()", link: "/use-navigation" },
-          { name: "useAuth()", link: "/use-auth" },
+          { name: "Auth", link: "/docs/auth" },
+          { name: "useNavigation()", link: "/docs/use-navigation" },
+          { name: "useAuth()", link: "/docs/use-auth" },
           // { name: "useAuth()", link: "/use-auth" },
         ]}
       />
@@ -30,9 +33,9 @@ const Sidenav = () => {
         navItems={[
           {
             name: "Theme Provider",
-            link: "/theme-provider",
+            link: "/docs/theme-provider",
           },
-          { name: "useTheme()", link: "/use-theme" },
+          { name: "useTheme()", link: "/docs/use-theme" },
         ]}
       />
       <NavGroup
@@ -40,9 +43,9 @@ const Sidenav = () => {
         navItems={[
           {
             name: "useAnimatedValue()",
-            link: "/use-animated-value",
+            link: "/docs/use-animated-value",
           },
-          { name: "AnimatedBlock", link: "/animated-block" },
+          { name: "AnimatedBlock", link: "/docs/animated-block" },
         ]}
       />
     </div>

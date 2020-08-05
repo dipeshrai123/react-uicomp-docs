@@ -21,6 +21,12 @@
   color: $light_black;
 }
 
+span.highlight {
+  background-color: $defaultborder;
+  border-radius: 4px;
+  padding: 0px 6px;
+}
+
 // BACKGROUND STYLES
 .bg {
   // COLORS

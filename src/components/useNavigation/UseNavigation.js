@@ -25,8 +25,8 @@ const UseNavigation = () => {
           </li>
           <ul className="list list--nested">
             <li className="list__item">
-              routes ( object ) : Object with keys you defined in{" "}
-              <b>publicPaths</b> and <b>privatePaths</b> in{" "}
+              <span className="highlight">routes ( object )</span> : Object with
+              keys you defined in <b>publicPaths</b> and <b>privatePaths</b> in{" "}
               <b>{"<Navigation.Provider>"}</b> and values are the object of name
               and path for a defined key.
             </li>

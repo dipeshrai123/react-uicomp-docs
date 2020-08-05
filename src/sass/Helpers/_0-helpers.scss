@@ -29,3 +29,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  @include scrollbar(10px, $defaultborder, $light_grey, darken($defaultborder, 10%));
+}

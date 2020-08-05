@@ -56,6 +56,18 @@ const Sidenav = () => {
           { name: "useOutsideClick()", link: "/docs/use-outside-click" },
         ]}
       />
+      <NavGroup
+        title="Components"
+        navItems={[
+          {
+            name: "Dropdown",
+            link: "/docs/dropdown",
+          },
+          { name: "DropdownMenu", link: "/docs/dropdown-menu" },
+          { name: "Modal", link: "/docs/modal" },
+          { name: "Toast", link: "/docs/toast" },
+        ]}
+      />
     </div>
   );
 };

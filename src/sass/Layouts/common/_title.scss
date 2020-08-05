@@ -1,0 +1,9 @@
+.title {
+  margin-bottom: 20px;
+  font-size: $large;
+  font-family: $avertaSemiBold;
+  &--secondary {
+    margin: 2rem 0 1rem 0;
+    font-size: $medium;
+  }
+}

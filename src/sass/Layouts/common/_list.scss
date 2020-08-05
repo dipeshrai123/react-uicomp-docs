@@ -1,0 +1,9 @@
+.list {
+  margin: 0.5rem 0;
+  margin-left: 2rem;
+  &__item {
+    line-height: 1.5;
+    margin: 0.1rem 0;
+    font-size: $thin;
+  }
+}

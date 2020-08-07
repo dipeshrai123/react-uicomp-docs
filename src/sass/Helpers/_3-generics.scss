@@ -36,12 +36,37 @@ b {
 
 // TABLE
 .table {
-  th { 
-    td {}
-  }
+  font-family: $avertaLight;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid $defaultborder;
 
   tr {
-    td {}
+    border-bottom: 1px solid $defaultborder;
+
+    %table-padding {
+      padding: 10px;
+    }
+
+    th {
+      text-align: left;
+      color: darken($light_black, 20%);
+      @extend %table-padding;
+    }
+
+    td {
+      @extend %table-padding;
+    }
+  }
+
+  tr:nth-child(even) {
+    background: darken($light_grey, 4%);
+  }
+
+  thead {
+    tr {
+      background: $light_grey;
+    }
   }
 }
 

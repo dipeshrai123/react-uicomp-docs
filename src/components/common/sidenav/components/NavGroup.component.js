@@ -25,8 +25,8 @@ const NavGroup = ({ title, navItems }) => {
 
         className="sidenav__navitems"
       >
-        {navItems.map((item) => (
-          <li className="sidenav__navitem">
+        {navItems.map((item, index) => (
+          <li key={index} className="sidenav__navitem">
             <ActiveLink
               to={item.link}
               className="sidenav__navlink"

@@ -34,6 +34,42 @@ b {
   color: $black;
 }
 
+// TABLE
+.table {
+  font-family: $avertaLight;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid $defaultborder;
+
+  tr {
+    border-bottom: 1px solid $defaultborder;
+
+    %table-padding {
+      padding: 15px;
+    }
+
+    th {
+      text-align: left;
+      color: darken($light_black, 20%);
+      @extend %table-padding;
+    }
+
+    td {
+      @extend %table-padding;
+    }
+  }
+
+  tr:nth-child(even) {
+    background: $light_grey;
+  }
+
+  thead {
+    tr {
+      background: darken($light_grey, 2%);
+    }
+  }
+}
+
 // BACKGROUND STYLES
 .bg {
   // COLORS

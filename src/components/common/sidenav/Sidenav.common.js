@@ -25,7 +25,6 @@ const Sidenav = () => {
           { name: "Auth", link: "/docs/auth" },
           { name: "useNavigation()", link: "/docs/use-navigation" },
           { name: "useAuth()", link: "/docs/use-auth" },
-          // { name: "useAuth()", link: "/use-auth" },
         ]}
       />
       <NavGroup
@@ -47,7 +46,7 @@ const Sidenav = () => {
           },
           { name: "AnimatedBlock", link: "/docs/animated-block" },
           { name: "interpolate()", link: "/docs/interpolate" },
-          // { name: "binaryInterpolate()", link: "/docs/binary-interpolate" },
+          // { name: "mix()", link: "/docs/mix" },
           // { name: "useScroll()", link: "/docs/use-scroll" },
           // { name: "useMeasure()", link: "/docs/use-measure" },
           // { name: "useMouseMove()", link: "/docs/use-mousemove" },
@@ -56,7 +55,7 @@ const Sidenav = () => {
           // { name: "useOutsideClick()", link: "/docs/use-outside-click" },
         ]}
       />
-      {/* <NavGroup
+      <NavGroup
         title="Components"
         navItems={[
           {
@@ -67,7 +66,7 @@ const Sidenav = () => {
           { name: "Modal", link: "/docs/modal" },
           { name: "Toast", link: "/docs/toast" },
         ]}
-      /> */}
+      />
     </div>
   );
 };

@@ -28,6 +28,10 @@ const App = () => {
             "/docs/use-animated-value",
             "/docs/animated-block",
             "/docs/interpolate",
+            "/docs/dropdown",
+            "/docs/dropdown-menu",
+            "/docs/modal",
+            "/docs/toast",
           ],
         },
       }}

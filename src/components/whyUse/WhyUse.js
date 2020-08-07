@@ -91,17 +91,8 @@ const WhyUse = () => {
         <SecondaryTitle>For Animation</SecondaryTitle>
 
         <Paragraph>
-          Let's take an example from the previous section. The box changes its
-          <span className="highlight">opacity</span> to{" "}
-          <span className="highlight">0</span> when we click the hide button and
-          to <span className="highlight">1</span> when we click the show button.
-          We also want the box to shrink to{" "}
-          <span className="highlight">.5</span> scale if{" "}
-          <span className="highlight">opacity</span> is
-          <span className="highlight">0</span> and to{" "}
-          <span className="highlight">1</span> if{" "}
-          <span className="highlight">opacity</span> is{" "}
-          <span className="highlight">1</span>.
+          We can create extremely cool and powerful animations with very few
+          code.
         </Paragraph>
       </section>
 

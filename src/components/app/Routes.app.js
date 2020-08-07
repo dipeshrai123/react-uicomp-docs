@@ -12,6 +12,10 @@ import UseTheme from "../useTheme/UseTheme";
 import UseAnimatedValue from "../useAnimatedValue/UseAnimatedValue";
 import AnimatedBlock from "../animatedBlock/AnimatedBlock";
 import Interpolate from "../interpolate/Interpolate";
+import DropdownPage from "../dropdownPage/DropdownPage";
+import DropdownMenuPage from "../dropdownMenuPage/DropdownMenuPage";
+import ModalPage from "../modalPage/ModalPage";
+import ToastPage from "../toastPage/ToastPage";
 
 const Redirect = () => {
   const { navigation } = useNavigation();
@@ -104,6 +108,30 @@ export const PUBLIC_PATHS = [
     name: "Interpolate",
     path: "/docs/interpolate",
     component: Interpolate,
+    restricted: true,
+  },
+  {
+    name: "Dropdown",
+    path: "/docs/dropdown",
+    component: DropdownPage,
+    restricted: true,
+  },
+  {
+    name: "DropdownMenu",
+    path: "/docs/dropdown-menu",
+    component: DropdownMenuPage,
+    restricted: true,
+  },
+  {
+    name: "Modal",
+    path: "/docs/modal",
+    component: ModalPage,
+    restricted: true,
+  },
+  {
+    name: "Toast",
+    path: "/docs/toast",
+    component: ToastPage,
     restricted: true,
   },
   {

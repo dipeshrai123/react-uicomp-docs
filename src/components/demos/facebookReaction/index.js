@@ -69,10 +69,11 @@ const AnimatedReaction = () => {
               ...styles.reactionItem,
               backgroundColor: "#31A2FC",
               opacity: reactionOne.value,
-              transform: interpolate(reactionOne.value, {
-                inputRange: [0, 1],
-                outputRange: ["translateY(20px)", "translateY(0px)"],
-              }),
+              transform: interpolate(
+                reactionOne.value,
+                [0, 1],
+                ["translateY(20px)", "translateY(0px)"]
+              ),
             }}
           >
             <AiFillLike />
@@ -82,10 +83,11 @@ const AnimatedReaction = () => {
               ...styles.reactionItem,
               backgroundColor: "#F4405B",
               opacity: reactionTwo.value,
-              transform: interpolate(reactionTwo.value, {
-                inputRange: [0, 1],
-                outputRange: ["translateY(20px)", "translateY(0px)"],
-              }),
+              transform: interpolate(
+                reactionTwo.value,
+                [0, 1],
+                ["translateY(20px)", "translateY(0px)"]
+              ),
             }}
           >
             <AiFillHeart />
@@ -95,10 +97,11 @@ const AnimatedReaction = () => {
               ...styles.reactionItem,
               backgroundColor: "#FCD55E",
               opacity: reactionThree.value,
-              transform: interpolate(reactionThree.value, {
-                inputRange: [0, 1],
-                outputRange: ["translateY(20px)", "translateY(0px)"],
-              }),
+              transform: interpolate(
+                reactionThree.value,
+                [0, 1],
+                ["translateY(20px)", "translateY(0px)"]
+              ),
             }}
           >
             <FaLaughSquint />
@@ -108,10 +111,11 @@ const AnimatedReaction = () => {
               ...styles.reactionItem,
               backgroundColor: "#FCD55E",
               opacity: reactionFour.value,
-              transform: interpolate(reactionFour.value, {
-                inputRange: [0, 1],
-                outputRange: ["translateY(20px)", "translateY(0px)"],
-              }),
+              transform: interpolate(
+                reactionFour.value,
+                [0, 1],
+                ["translateY(20px)", "translateY(0px)"]
+              ),
             }}
           >
             <FaSadCry />
@@ -121,10 +125,11 @@ const AnimatedReaction = () => {
               ...styles.reactionItem,
               backgroundColor: "#EB6012",
               opacity: reactionFive.value,
-              transform: interpolate(reactionFive.value, {
-                inputRange: [0, 1],
-                outputRange: ["translateY(20px)", "translateY(0px)"],
-              }),
+              transform: interpolate(
+                reactionFive.value,
+                [0, 1],
+                ["translateY(20px)", "translateY(0px)"]
+              ),
             }}
           >
             <FaAngry />

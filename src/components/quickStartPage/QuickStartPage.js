@@ -44,7 +44,7 @@ const QuickStartPage = () => {
       <section>
         <SecondaryTitle>Installation</SecondaryTitle>
         <Paragraph>
-          React UI Comp 1.2.0 requires
+          React UI Comp 1.2.2 requires
           <b>
             {" "}
             <span className="highlight">react 16.13.1</span> or later,{" "}

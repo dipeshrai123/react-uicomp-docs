@@ -13,11 +13,11 @@ export default function Interpolate() {
           borderRadius: 4,
           background: "#39F",
           opacity: opacity.value,
-          transform: interpolate(opacity.value, {
-            inputRange: [0, 1],
-            outputRange: ["scale(0.5)", "scale(1)"],
-            extrapolate: "clamp",
-          }),
+          transform: interpolate(
+            opacity.value,
+            [0, 1],
+            ["scale(0.5)", "scale(1)"]
+          ),
         }}
       />
       <br />

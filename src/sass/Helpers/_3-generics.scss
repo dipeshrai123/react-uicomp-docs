@@ -70,6 +70,35 @@ b {
   }
 }
 
+.button {
+  padding: 10px;
+  border: 1px solid #E1E1E1;
+  display: inline-block;
+  cursor: pointer;
+  background: $light_grey;
+  border-radius: 20px;
+  outline: none;
+  min-width: 80px;
+  transition: background .2s;
+
+  &:hover {
+    background: darken($light_grey, 4%);
+  }
+
+  &:active {
+    background: darken($light_grey, 10%);
+  }
+
+  &:focus {
+    border: 1px solid $blue;
+  }
+}
+
+.gap {
+  width: 10px;
+  display: inline-block;
+}
+
 // BACKGROUND STYLES
 .bg {
   // COLORS

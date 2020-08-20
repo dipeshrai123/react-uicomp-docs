@@ -30,7 +30,9 @@ const DropdownPage = () => {
 
       <section>
         <SecondaryTitle>Demo</SecondaryTitle>
-        <Dropdown triggerElement={() => <button>Toggle Menu</button>}>
+        <Dropdown
+          triggerElement={() => <button className="button">Toggle Menu</button>}
+        >
           <div
             style={{
               background: "#FFF",
@@ -119,7 +121,7 @@ const DropdownPage = () => {
             </tr>
             <tr>
               <td>animationType(optional)</td>
-              <td>"fade" | "expand"</td>
+              <td>"fade" | "expand" | "elastic"</td>
               <td>Type of animation for dropdown</td>
               <td>"expand"</td>
             </tr>

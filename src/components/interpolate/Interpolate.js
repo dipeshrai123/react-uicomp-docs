@@ -37,10 +37,7 @@ const Interpolate = () => {
           <Code>
             {`
 // Here opacity is animated node so it has .value property
-interpolate(opacity.value, {
-  inputRange: [0, 1],
-  outputRange: [0, 500]
-})
+interpolate(opacity.value, [0, 1], [0, 500])
           `}
           </Code>
         </Paragraph>
@@ -83,12 +80,7 @@ export default function Interpolate() {
           borderRadius: 4,
           background: "#39F",
           opacity: opacity.value,
-          // We are interpolating the transform scale property
-          transform: interpolate(opacity.value, {
-            inputRange: [0, 1],
-            outputRange: ["scale(0.5)", "scale(1)"],
-            extrapolate: "clamp",
-          }),
+          transform: interpolate(opacity.value, [0, 1], ["scale(0.5)", "scale(1)"]),
         }}
       />
       <br />

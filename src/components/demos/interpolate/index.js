@@ -21,8 +21,13 @@ export default function Interpolate() {
         }}
       />
       <br />
-      <button onClick={() => (opacity.value = 1)}>Show</button>
-      <button onClick={() => (opacity.value = 0)}>Hide</button>
+      <button className="button" onClick={() => (opacity.value = 1)}>
+        Show
+      </button>
+      <div className="gap"></div>
+      <button className="button" onClick={() => (opacity.value = 0)}>
+        Hide
+      </button>
     </div>
   );
 }

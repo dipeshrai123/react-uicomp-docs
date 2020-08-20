@@ -88,6 +88,10 @@ b {
   &:active {
     background: darken($light_grey, 10%);
   }
+
+  &:focus {
+    border: 1px solid $blue;
+  }
 }
 
 .gap {

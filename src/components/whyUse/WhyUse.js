@@ -92,7 +92,7 @@ const WhyUse = () => {
           You can create these kinds of parallex effects very easily.
         </Paragraph>
         <iframe
-          src="https://codesandbox.io/embed/parallex-header-navigation-83s30?fontsize=14&hidenavigation=1&theme=dark"
+          src="https://codesandbox.io/embed/parallex-header-navigation-83s30?fontsize=14&hidenavigation=1&theme=dark&view=preview"
           style={{
             width: "100%",
             height: 500,

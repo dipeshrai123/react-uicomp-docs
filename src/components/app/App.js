@@ -15,24 +15,7 @@ const App = () => {
       privatePaths={[]}
       userRoles={{
         user: {
-          access: [
-            "/",
-            "/docs/quick-start",
-            "/docs/why-use-react-uicomp",
-            "/docs/navigation",
-            "/docs/auth",
-            "/docs/use-navigation",
-            "/docs/use-auth",
-            "/docs/theme",
-            "/docs/use-theme",
-            "/docs/use-animated-value",
-            "/docs/animated-block",
-            "/docs/interpolate",
-            "/docs/dropdown",
-            "/docs/dropdown-menu",
-            "/docs/modal",
-            "/docs/toast",
-          ],
+          access: ["*"],
         },
       }}
     >

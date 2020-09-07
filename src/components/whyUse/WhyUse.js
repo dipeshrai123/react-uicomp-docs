@@ -2,7 +2,6 @@ import React from "react";
 import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
 import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
-import FacebookReaction from "../demos/facebookReaction";
 
 const WhyUse = () => {
   React.useEffect(() => {
@@ -58,7 +57,7 @@ const WhyUse = () => {
             <span className="highlight">
               <b>/route_b</b>
             </span>{" "}
-            can be accessed by all user roles if they are logged in and they
+            can be accessed by all user roles if they are not logged in and they
             cannot access after login.
           </li>
           <li className="list__item">
@@ -89,17 +88,22 @@ const WhyUse = () => {
 
       <section>
         <SecondaryTitle>For Animation</SecondaryTitle>
-
         <Paragraph>
-          We can create extremely cool and powerful animations with very few
-          code.
+          You can create these kinds of parallex effects very easily.
         </Paragraph>
-      </section>
-
-      <section>
-        <SecondaryTitle>Demo ( Animated Reaction )</SecondaryTitle>
-
-        <FacebookReaction />
+        <iframe
+          src="https://codesandbox.io/embed/parallex-header-navigation-83s30?fontsize=14&hidenavigation=1&theme=dark"
+          style={{
+            width: "100%",
+            height: 500,
+            border: 0,
+            borderRadius: 4,
+            overflow: "hidden",
+          }}
+          title="Parallex Header Navigation"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
       </section>
     </div>
   );

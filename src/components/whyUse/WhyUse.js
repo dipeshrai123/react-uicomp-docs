@@ -89,17 +89,22 @@ const WhyUse = () => {
 
       <section>
         <SecondaryTitle>For Animation</SecondaryTitle>
-
         <Paragraph>
-          We can create extremely cool and powerful animations with very few
-          code.
+          You can create these kinds of parallex effects very easily.
         </Paragraph>
-      </section>
-
-      <section>
-        <SecondaryTitle>Demo ( Animated Reaction )</SecondaryTitle>
-
-        <FacebookReaction />
+        <iframe
+          src="https://codesandbox.io/embed/parallex-header-navigation-83s30?fontsize=14&hidenavigation=1&theme=dark"
+          style={{
+            width: "100%",
+            height: 500,
+            border: 0,
+            borderRadius: 4,
+            overflow: "hidden",
+          }}
+          title="Parallex Header Navigation"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
       </section>
     </div>
   );

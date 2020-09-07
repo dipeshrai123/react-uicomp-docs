@@ -2,7 +2,6 @@ import React from "react";
 import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
 import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
-import FacebookReaction from "../demos/facebookReaction";
 
 const WhyUse = () => {
   React.useEffect(() => {
@@ -58,7 +57,7 @@ const WhyUse = () => {
             <span className="highlight">
               <b>/route_b</b>
             </span>{" "}
-            can be accessed by all user roles if they are logged in and they
+            can be accessed by all user roles if they are not logged in and they
             cannot access after login.
           </li>
           <li className="list__item">

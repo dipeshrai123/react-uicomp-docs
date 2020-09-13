@@ -42,26 +42,23 @@ const Navigation = () => {
           </li>
         </ul>
         <Paragraph>
-          We also should define users for these routes so that we can manage who
-          can access which route.
-        </Paragraph>
-        <Paragraph>
-          To define these React UI Comp provides a Higher Order Component (HOC)
-          called{" "}
+          We also should define <span className="highlight">userRoles</span> who
+          can access different routes. To define these React UI Comp provides a
+          Higher Order Component (HOC) called{" "}
           <span className="highlight">
-            <b>{"<Navigation.Provider>"}</b>
-          </span>
+            <b>{"withNavigation()"}</b>
+          </span>{" "}
           . It allows us to define all those routes and roles by passing them as
           a prop.
         </Paragraph>
       </section>
       <section>
-        <SecondaryTitle>Navigation.Provider</SecondaryTitle>
+        <SecondaryTitle>withNavigation()</SecondaryTitle>
         <Paragraph>
-          <b>Navigation.Provider</b> manages all the routes and user roles for
-          you. Usually you should wrap an entire app i.e. root component with{" "}
+          <b>withNavigation()</b> manages all the routes and user roles for you.
+          Usually you should export a root component with{" "}
           <span className="highlight">
-            <b>{"<Navigation.Provider>"}</b>
+            <b>withNavigation()</b>
           </span>{" "}
           HOC.
         </Paragraph>
@@ -77,12 +74,9 @@ const Navigation = () => {
           </li>
           <ol className="list list--nested list--alpha">
             <li className="list__item">
-              <span className="highlight">key ( string )</span> : Unique key to
-              access using useNavigation() hook.
-            </li>
-            <li className="list__item">
               <span className="highlight">name ( string )</span> : Defines the
-              name for a path
+              name for a path and used as a key for useNavigation()'s route keys
+              if key is not passed.
             </li>
             <li className="list__item">
               <span className="highlight">path ( string )</span> : Defines the
@@ -106,12 +100,9 @@ const Navigation = () => {
           </li>
           <ol className="list list--nested  list--alpha">
             <li className="list__item">
-              <span className="highlight">key ( string )</span> : Unique key to
-              access using useNavigation() hook.
-            </li>
-            <li className="list__item">
               <span className="highlight">name ( string )</span> : Defines the
-              name for a path
+              name for a path used as a key for useNavigation()'s route keys if
+              key is not passed.
             </li>
             <li className="list__item">
               <span className="highlight">path ( string )</span> : Defines the
@@ -128,9 +119,7 @@ const Navigation = () => {
               <b>userRoles</b>
             </span>{" "}
             accepts an object with any number of keys which defines the access
-            routes for a user. <br />
-            Format of userRoles object is: <br />{" "}
-            <Code>{"{ [role] : { access: Array of paths } }"}</Code>
+            routes for a user.
           </li>
         </ol>
       </section>
@@ -138,14 +127,33 @@ const Navigation = () => {
         <SecondaryTitle>Example</SecondaryTitle>
         <Code>
           {`
+// app.js
 import React from "react";
-import { Navigation } from "react-uicomp";
-import { Page1, Page2 } from "./Pages";
+import { withNavigation } from "react-uicomp";
+import { publicRoutes, privateRoutes, userRoles } from "./routes";
 
-// Array of object having key, name, path, component and restricted.
-const publicPaths = [
+const App = () => {
+  return (
+    // ...
+  );
+};
+
+export default withNavigation(App, {
+  publicPaths,
+  privatePaths,
+  userRoles,
+});
+          `}
+        </Code>
+        <Code>
+          {`
+// routes.js
+import Page1 from "./Pages/Page1";
+import Page2 from "./Pages/Page2";
+
+// Array of object having name, path, component and restricted.
+export const publicPaths = [
   {
-    key: "Public",
     name: "Public",
     path: "/public",
     component: Page1,
@@ -153,10 +161,9 @@ const publicPaths = [
   },
 ];
 
-// Array of object having key, name, path and component.
-const privatePaths = [
+// Array of object having name, path and component.
+export const privatePaths = [
   {
-    key: "Private",
     name: "Private",
     path: "/private",
     component: Page2,
@@ -164,24 +171,10 @@ const privatePaths = [
 ];
 
 // Define user role and provide access routes.
-const userRoles = { 
+export const userRoles = { 
     user: { access: ["/public"] }, 
     admin:  { access: ["/public", "/private"] },
 };
-
-const App = () => {
-  return (
-    <Navigation.Provider
-      publicPaths={publicPaths}
-      privatePaths={privatePaths}
-      userRoles={userRoles}
-    >
-      // ...
-    </Navigation.Provider>
-  );
-};
-
-export default App;
           `}
         </Code>
       </section>

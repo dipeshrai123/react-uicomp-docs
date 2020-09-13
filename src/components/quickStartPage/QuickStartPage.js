@@ -16,13 +16,9 @@ const QuickStartPage = () => {
         <Paragraph>
           When it comes to authentication and routing for multiple users in the
           same application the codebase gets messy with similar logic
-          everywhere.
-        </Paragraph>
-        <Paragraph>
-          Developing simple animations takes a lot of initial setup.
-        </Paragraph>
-        <Paragraph>
-          React UI Comp is built from ground up to solve these problems.
+          everywhere. And also implementing good quality animations would be
+          quite complicated and requires lots of initial set up. React UI Comp
+          is built from ground up to solve these problems.
         </Paragraph>
         <Paragraph>
           What follows within the Fundamentals section of this documentation is

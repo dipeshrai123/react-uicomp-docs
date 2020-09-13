@@ -1,6 +1,6 @@
 .sidenav {
   position: fixed;
-  width: 300px;
+  width: 280px;
   height: 100%;
   background-color: $white;
   z-index: 9;
@@ -8,8 +8,9 @@
   padding: 20px;
   top: 75px;
   overflow-y: auto;
-  @include scrollbar(10px, $defaultborder, $light_grey, $defaultborder);
+  @include scrollbar(4px, $defaultborder, $light_grey, $defaultborder);
   padding-bottom: 85px;
+  
   &__nav-group {
     margin: 20px 0;
   }

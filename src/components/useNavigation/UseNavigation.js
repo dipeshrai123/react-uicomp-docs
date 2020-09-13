@@ -35,9 +35,9 @@ const UseNavigation = () => {
           <ul className="list list--nested">
             <li className="list__item">
               <span className="highlight">routes ( object )</span> : Object with
-              keys you defined in <b>publicPaths</b> and <b>privatePaths</b> in{" "}
-              <b>{"<Navigation.Provider>"}</b> and values are the object of name
-              and path for a defined key.
+              name key you defined in <b>publicPaths</b> and <b>privatePaths</b>{" "}
+              in <b>withNavigation()</b> and values are the object of name and
+              path for a defined key.
             </li>
             <li className="list__item">
               <span className="highlight">navigate ( function )</span> :
@@ -57,15 +57,15 @@ const UseNavigation = () => {
           <br />
           <li className="list__item">
             <span className="highlight">history ( object )</span> : History
-            object provided by react-router-dom useHistory() hook.
+            object same as react-router-doms's history object.
           </li>
           <li className="list__item">
-            <span className="highlight">location ( object )</span> : History
-            object provided by react-router-dom useLocation() hook.
+            <span className="highlight">location ( object )</span> : Location
+            object same as react-router-dom's location object.
           </li>
           <li className="list__item">
-            <span className="highlight">params ( object )</span> : History
-            object provided by react-router-dom useParams() hook.
+            <span className="highlight">params ( object )</span> : Params object
+            same as react-router-dom's params object.
           </li>
         </ul>
       </section>

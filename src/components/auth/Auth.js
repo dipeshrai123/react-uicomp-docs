@@ -17,7 +17,7 @@ const Auth = () => {
           Auth provides 2 different HOCs which handles all the authentications
           defined by{" "}
           <span className="highlight">
-            <b>{"<Navigation.Provider>"}</b>
+            <b>{"withNavigation()"}</b>
           </span>{" "}
           HOC.
         </Paragraph>
@@ -70,22 +70,19 @@ const Auth = () => {
             <br />
             It returns all the authenticated screens based on the current state
             of a user and all the routes provided to{" "}
-            <b>{"<Navigation.Provider>"} </b>
+            <b>{"withNavigation()"} </b>
             HOC.
           </Paragraph>
           <Paragraph>
-            Hierarchy of Routing should be:
+            Component with Auth.Provider HOC should be wrapped with
+            withNavigation() hoc.
             <Code>
               {`
-<Navigation.Provider {...{ ...propsToThis }}>
-  <Auth.Provider {...{ ...propsToThis }}>
-    <Auth.Screens {...{ ...propsToThis }}/>
-  </Auth.Provider>
-</Navigation.Provider>
+<Auth.Provider {...propsToThis}>
+  <Auth.Screens {...propsToThis} />
+</Auth.Provider>
               `}
             </Code>
-            Navigation.Provider should be wrapping all other HOCs. Auth.Provider
-            should wrap Auth.Screens.
           </Paragraph>
         </li>
       </ol>
@@ -93,20 +90,14 @@ const Auth = () => {
         <SecondaryTitle>Example</SecondaryTitle>
         <Code>
           {`
-// import Auth from here
-import { Navigation, Auth } from "react-uicomp";
-
-...
+// app.js 
+import { withNavigation, Auth } from "react-uicomp";
+import { publicPaths, privatePaths, userRoles } from "./routes";
 
 const App = () => {
   const [config, setConfig] = useState({ isLoggedIn: false, userRole: "user" });
 
   return (
-    <Navigation.Provider
-      publicPaths={publicPaths}
-      privatePaths={privatePaths}
-      userRoles={userRoles}
-    >
       <Auth.Provider
         config={config}
         state={{
@@ -117,9 +108,14 @@ const App = () => {
       >
         <Auth.Screens />
       </Auth.Provider>
-    </Navigation.Provider>
   );
 };
+
+export default withNavigation(App, {
+  publicPaths,
+  privatePaths,
+  userRoles,
+});
           `}
         </Code>
       </section>

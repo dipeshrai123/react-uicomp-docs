@@ -16,6 +16,14 @@ import DropdownPage from "../dropdownPage/DropdownPage";
 import DropdownMenuPage from "../dropdownMenuPage/DropdownMenuPage";
 import ModalPage from "../modalPage/ModalPage";
 import ToastPage from "../toastPage/ToastPage";
+import UseMeasureApiRefPage from "../useMeasureApiRefPage/UseMeasureApiRefPage";
+import UseAnimatedValueApiRefPage from "../useAnimatedValueApiRefPage/UseAnimatedValueApiRefPage";
+import InterpolateApiRefPage from "../interpolateApiRefPage/interpolateApiRefPage";
+import UseOutsideClickApiRefPage from "../useOutsideClickApiRefPage/useOutsideClickApiRefPage";
+import UseMouseMoveApiRefPage from "../useMouseMoveApiRefPage/UseMouseMoveApiRefPage";
+import UseScrollApiRefPage from "../useScrollApiRefPage/UseScrollApiRefPage";
+import UseMountedValueApiRef from "../useMountedValueApiRefPage/UseMountedValueApiRef";
+import UseWindowDimensionApiRef from "../useWindowDimensionRefPage/UseWindowDimensionApiRef";
 
 const Redirect = () => {
   const { navigation } = useNavigation();
@@ -132,6 +140,54 @@ export const PUBLIC_PATHS = [
     name: "Toast",
     path: "/docs/toast",
     component: ToastPage,
+    restricted: true,
+  },
+  {
+    name: "useMeasure",
+    path: "/docs/api-ref/use-measure",
+    component: UseMeasureApiRefPage,
+    restricted: true,
+  },
+  {
+    name: "useAnimatedValue()",
+    path: "/docs/api-ref/use-animated-value",
+    component: UseAnimatedValueApiRefPage,
+    restricted: true,
+  },
+  {
+    name: "interpolate()",
+    path: "/docs/api-ref/interpolate",
+    component: InterpolateApiRefPage,
+    restricted: true,
+  },
+  {
+    name: "useOutsideClick()",
+    path: "/docs/api-ref/use-outside-click",
+    component: UseOutsideClickApiRefPage,
+    restricted: true,
+  },
+  {
+    name: "useMouseMove()",
+    path: "/docs/api-ref/use-mouse-move",
+    component: UseMouseMoveApiRefPage,
+    restricted: true,
+  },
+  {
+    name: "useScroll()",
+    path: "/docs/api-ref/use-scroll",
+    component: UseScrollApiRefPage,
+    restricted: true,
+  },
+  {
+    name: "useMountedValue()",
+    path: "/docs/api-ref/use-mounted-value",
+    component: UseMountedValueApiRef,
+    restricted: true,
+  },
+  {
+    name: "useMountedValue()",
+    path: "/docs/api-ref/use-window-dimension",
+    component: UseWindowDimensionApiRef,
     restricted: true,
   },
   {

@@ -4,21 +4,25 @@ import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 import Paragraph from "../common/paragraph/Paragraph";
 import Code from "../common/code/Code.common";
 
-const QuickStartPage = () => {
+const InterpolateApiRefPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div>
-      <Title>Quick Start</Title>
+      <Title>interpolate()</Title>
       <section>
         <Paragraph>
           When it comes to authentication and routing for multiple users in the
           same application the codebase gets messy with similar logic
-          everywhere. And also implementing good quality animations would be
-          quite complicated and requires lots of initial set up. React UI Comp
-          is built from ground up to solve these problems.
+          everywhere.
+        </Paragraph>
+        <Paragraph>
+          Developing simple animations takes a lot of initial setup.
+        </Paragraph>
+        <Paragraph>
+          React UI Comp is built from ground up to solve these problems.
         </Paragraph>
         <Paragraph>
           What follows within the Fundamentals section of this documentation is
@@ -57,4 +61,4 @@ const QuickStartPage = () => {
   );
 };
 
-export default QuickStartPage;
+export default InterpolateApiRefPage;

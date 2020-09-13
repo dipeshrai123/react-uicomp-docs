@@ -67,6 +67,55 @@ const Sidenav = () => {
           { name: "Toast", link: "/docs/toast" },
         ]}
       />
+      <NavGroup
+        title="Components"
+        navItems={[
+          {
+            name: "Dropdown",
+            link: "/docs/dropdown",
+          },
+          { name: "DropdownMenu", link: "/docs/dropdown-menu" },
+          { name: "Modal", link: "/docs/modal" },
+          { name: "Toast", link: "/docs/toast" },
+        ]}
+      />
+      <NavGroup
+        title="API Reference"
+        navItems={[
+          {
+            name: "useMeasure()",
+            link: "/docs/api-ref/use-measure",
+          },
+          {
+            name: "useAnimatedVallue()",
+            link: "/docs/api-ref/use-animated-value",
+          },
+          {
+            name: "interpolate()",
+            link: "/docs/api-ref/interpolate",
+          },
+          {
+            name: "useOutsideClick()",
+            link: "/docs/api-ref/use-outside-click",
+          },
+          {
+            name: "useMouseMove()",
+            link: "/docs/api-ref/use-mouse-move",
+          },
+          {
+            name: "useScroll()",
+            link: "/docs/api-ref/use-scroll",
+          },
+          {
+            name: "useMountedValue()",
+            link: "/docs/api-ref/use-mounted-value",
+          },
+          {
+            name: "useWindowDimension()",
+            link: "/docs/api-ref/use-window-dimension",
+          },
+        ]}
+      />
     </div>
   );
 };

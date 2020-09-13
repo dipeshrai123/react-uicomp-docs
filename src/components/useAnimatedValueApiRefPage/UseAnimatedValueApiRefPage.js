@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Title from "../common/title/Title";
-import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 import Paragraph from "../common/paragraph/Paragraph";
-import Code from "../common/code/Code.common";
+// import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
+// import Code from "../common/code/Code.common";
 
 const UseAnimatedValueApiRefPage = () => {
   useEffect(() => {
@@ -13,7 +13,7 @@ const UseAnimatedValueApiRefPage = () => {
     <div>
       <Title>useAnimatedValue()</Title>
       <section>
-        <Paragraph>When it comes to authentication and routing</Paragraph>
+        <Paragraph>Coming soon...</Paragraph>
       </section>
     </div>
   );

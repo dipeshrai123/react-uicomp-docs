@@ -7,7 +7,7 @@ const Header = () => {
       <nav className="header__wrapper">
         <img src={Logo} alt="React UI Comp Logo" />
         <h2 className="header__title">
-          React UI Comp <span style={{ fontSize: 14 }}>v1.3.2</span>
+          React UI Comp <span style={{ fontSize: 14 }}>v1.3.4</span>
         </h2>
       </nav>
     </div>

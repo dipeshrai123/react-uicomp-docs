@@ -147,7 +147,7 @@ const DropdownMenuPage = () => {
           <Code>
             {`
 import React from "react";
-import { Dropdown, DropdownMenuItem, DropdownMenuSeparator } from "react-uicomp";
+import { Dropdown, DropdownMenu, DropdownMenuItem, DropdownMenuSeparator } from "react-uicomp";
 
 export default function DropdownComponent() {
   return (

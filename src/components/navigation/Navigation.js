@@ -68,6 +68,12 @@ const Navigation = () => {
         <ol className="list">
           <li className="list__item">
             <span className="highlight">
+              <b>routerType</b>
+            </span>{" "}( optional ) : {" "}
+            It can be either "hash" or "browser". Default "browser"
+          </li>
+          <li className="list__item">
+            <span className="highlight">
               <b>publicPaths</b>
             </span>{" "}
             accepts an array of object with following keys:
@@ -80,15 +86,24 @@ const Navigation = () => {
             </li>
             <li className="list__item">
               <span className="highlight">path ( string )</span> : Defines the
-              path for a component
+              path for a component.
             </li>
             <li className="list__item">
               <span className="highlight">component ( Component )</span> :
-              Defines a component for a path
+              Defines a component for a path.
             </li>
             <li className="list__item">
               <span className="highlight">restricted ( boolean )</span> : If
-              true then it is protected route otherwise public
+              true then it is protected route otherwise public.
+            </li>
+            <li className="list__item">
+              <span className="highlight">subPaths ( array )</span>( optional ) : Accepts array of object with
+              same keys as publicPaths. It is used to make sub routes ( full-page routing ) rather than 
+              making all routes individually.
+            </li>
+            <li className="list__item">
+              <span className="highlight">nestedPaths ( array )</span>( optional ) : Accepts array of object with
+              same keys as publicPaths. It is used to make nested routes ( component routing ).
             </li>
           </ol>
           <br />
@@ -106,11 +121,20 @@ const Navigation = () => {
             </li>
             <li className="list__item">
               <span className="highlight">path ( string )</span> : Defines the
-              path for a component
+              path for a component.
             </li>
             <li className="list__item">
               <span className="highlight">component ( Component )</span> :
-              Defines a component for a path
+              Defines a component for a path.
+            </li>
+            <li className="list__item">
+              <span className="highlight">subPaths ( array )</span>( optional ) : Accepts array of object with
+              same keys as privatePaths. It is used to make sub routes ( full-page routing ) rather than 
+              making all routes individually. 
+            </li>
+            <li className="list__item">
+              <span className="highlight">nestedPaths ( array )</span>( optional ) : Accepts array of object with
+              same keys as privatePaths. It is used to make nested routes ( component routing ).
             </li>
           </ol>
           <br />
@@ -119,32 +143,25 @@ const Navigation = () => {
               <b>userRoles</b>
             </span>{" "}
             accepts an object with any number of keys which defines the access
-            routes for a user.
+            routes for a user. You can use `*` for giving access to any routes for a user. Or you can 
+            give particular routes and its sub routes then you can use as `route_name/*`
           </li>
         </ol>
+        <Code>
+          {`
+// format for userRole
+userRoles: { [role_name<string>]: { access: Array<string> } }
+          `}
+        </Code>
       </section>
       <section>
         <SecondaryTitle>Example</SecondaryTitle>
-        <Code>
-          {`
-// app.js
-import React from "react";
-import { withNavigation } from "react-uicomp";
-import { publicRoutes, privateRoutes, userRoles } from "./routes";
 
-const App = () => {
-  return (
-    // ...
-  );
-};
-
-export default withNavigation(App, {
-  publicPaths,
-  privatePaths,
-  userRoles,
-});
-          `}
-        </Code>
+        <Paragraph>
+          Basic example of routing. First create publicPaths, privatePaths and userRoles and use with 
+          withNavigation() hoc.
+        </Paragraph>
+        
         <Code>
           {`
 // routes.js
@@ -173,8 +190,28 @@ export const privatePaths = [
 // Define user role and provide access routes.
 export const userRoles = { 
     user: { access: ["/public"] }, 
-    admin:  { access: ["/public", "/private"] },
+    admin:  { access: ["*"] },
 };
+          `}
+        </Code>
+        <Code>
+          {`
+// app.js
+import React from "react";
+import { withNavigation } from "react-uicomp";
+import { publicRoutes, privateRoutes, userRoles } from "./routes";
+
+const App = () => {
+  return (
+    // ...
+  );
+};
+
+export default withNavigation(App, {
+  publicPaths,
+  privatePaths,
+  userRoles,
+});
           `}
         </Code>
       </section>

@@ -49,9 +49,13 @@ const QuickStartPage = () => {
           </b>
         </Paragraph>
         <Paragraph>To use React UI Comp with your React App.</Paragraph>
-        <Code>npm install react-uicomp</Code>
+        <Code>{`
+// npm
+npm install react-uicomp`}</Code>
         <Paragraph>or</Paragraph>
-        <Code>yarn add react-uicomp</Code>
+        <Code>{`
+// yarn
+yarn add react-uicomp`}</Code>
       </section>
     </div>
   );

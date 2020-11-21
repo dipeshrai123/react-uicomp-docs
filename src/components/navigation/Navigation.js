@@ -60,7 +60,12 @@ const Navigation = () => {
           <span className="highlight">
             <b>withNavigation()</b>
           </span>{" "}
-          HOC.
+          HOC.{" "}
+          <span className="highlight">
+            <b>{`withNavigation()`}</b>
+          </span>{" "}
+          accepts component as its first argument and object with publicPaths,
+          privatePaths, userRoles and routerType as second argument.
         </Paragraph>
         <Paragraph>
           <b>Configuring publicPaths, privatePaths and userRoles</b>
@@ -69,8 +74,9 @@ const Navigation = () => {
           <li className="list__item">
             <span className="highlight">
               <b>routerType</b>
-            </span>{" "}( optional ) : {" "}
-            It can be either "hash" or "browser". Default "browser"
+            </span>{" "}
+            ( optional ) : It can be either "hash" or "browser". Default
+            "browser"
           </li>
           <li className="list__item">
             <span className="highlight">
@@ -97,13 +103,15 @@ const Navigation = () => {
               true then it is protected route otherwise public.
             </li>
             <li className="list__item">
-              <span className="highlight">subPaths ( array )</span>( optional ) : Accepts array of object with
-              same keys as publicPaths. It is used to make sub routes ( full-page routing ) rather than 
-              making all routes individually.
+              <span className="highlight">subPaths ( array )</span>( optional )
+              : Accepts array of object with same keys as publicPaths. It is
+              used to make sub routes ( full-page routing ) rather than making
+              all routes individually.
             </li>
             <li className="list__item">
-              <span className="highlight">nestedPaths ( array )</span>( optional ) : Accepts array of object with
-              same keys as publicPaths. It is used to make nested routes ( component routing ).
+              <span className="highlight">nestedPaths ( array )</span>( optional
+              ) : Accepts array of object with same keys as publicPaths. It is
+              used to make nested routes ( component routing ).
             </li>
           </ol>
           <br />
@@ -128,13 +136,15 @@ const Navigation = () => {
               Defines a component for a path.
             </li>
             <li className="list__item">
-              <span className="highlight">subPaths ( array )</span>( optional ) : Accepts array of object with
-              same keys as privatePaths. It is used to make sub routes ( full-page routing ) rather than 
-              making all routes individually. 
+              <span className="highlight">subPaths ( array )</span>( optional )
+              : Accepts array of object with same keys as privatePaths. It is
+              used to make sub routes ( full-page routing ) rather than making
+              all routes individually.
             </li>
             <li className="list__item">
-              <span className="highlight">nestedPaths ( array )</span>( optional ) : Accepts array of object with
-              same keys as privatePaths. It is used to make nested routes ( component routing ).
+              <span className="highlight">nestedPaths ( array )</span>( optional
+              ) : Accepts array of object with same keys as privatePaths. It is
+              used to make nested routes ( component routing ).
             </li>
           </ol>
           <br />
@@ -143,8 +153,9 @@ const Navigation = () => {
               <b>userRoles</b>
             </span>{" "}
             accepts an object with any number of keys which defines the access
-            routes for a user. You can use `*` for giving access to any routes for a user. Or you can 
-            give particular routes and its sub routes then you can use as `route_name/*`
+            routes for a user. You can use `*` for giving access to any routes
+            for a user. Or you can give particular routes and its sub routes
+            then you can use as `route_name/*`
           </li>
         </ol>
         <Code>
@@ -158,10 +169,10 @@ userRoles: { [role_name<string>]: { access: Array<string> } }
         <SecondaryTitle>Example</SecondaryTitle>
 
         <Paragraph>
-          Basic example of routing. First create publicPaths, privatePaths and userRoles and use with 
-          withNavigation() hoc.
+          Basic example of routing. First create publicPaths, privatePaths and
+          userRoles and use with withNavigation() hoc.
         </Paragraph>
-        
+
         <Code>
           {`
 // routes.js

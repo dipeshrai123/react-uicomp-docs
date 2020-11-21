@@ -20,14 +20,29 @@ const WhyUse = () => {
           implementation of react-router-dom which enables you to write routings
           and user roles authentication very easily.
         </Paragraph>
+
+        <iframe
+          src="https://codesandbox.io/embed/sub-routing-using-react-uicomp-rf0fk?fontsize=14&hidenavigation=1&theme=dark"
+          style={{
+            width: "100%",
+            height: 500,
+            border: 0,
+            borderRadius: 4,
+            overflow: "hidden",
+          }}
+          title="Sub Routing using react-uicomp"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
       </section>
 
       <section>
         <SecondaryTitle>For Animation</SecondaryTitle>
         <Paragraph>
-          It provides some useful hooks and functions that allows you to write
-          smooth animations very easily.
+          It provides some useful hocs, hooks and functions that allows you to
+          write smooth animations very easily.
         </Paragraph>
+
         <iframe
           src="https://codesandbox.io/embed/parallex-header-navigation-83s30?fontsize=14&hidenavigation=1&theme=dark&view=preview"
           style={{

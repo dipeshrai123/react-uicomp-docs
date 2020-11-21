@@ -39,7 +39,7 @@ const UseAnimatedValue = () => {
           value <span className="highlight">1</span>. And opacity has a property
           called <span className="highlight">value</span>. At any time we set
           opacity.value to some number then it changes its value from 1 to that
-          number.
+          number smoothly.
         </Paragraph>
         <Paragraph>
           We can change the <span className="highlight">opacity.value</span> to{" "}

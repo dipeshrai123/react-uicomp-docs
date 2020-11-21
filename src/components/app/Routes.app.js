@@ -17,12 +17,12 @@ import DropdownMenuPage from "../dropdownMenuPage/DropdownMenuPage";
 import ModalPage from "../modalPage/ModalPage";
 import ToastPage from "../toastPage/ToastPage";
 import UseMeasureApiRefPage from "../useMeasureApiRefPage/UseMeasureApiRefPage";
-import UseAnimatedValueApiRefPage from "../useAnimatedValueApiRefPage/UseAnimatedValueApiRefPage";
+import ScrollableBlock from "../scrollableBlock/ScrollableBlock";
 import InterpolateApiRefPage from "../interpolateApiRefPage/interpolateApiRefPage";
 import UseOutsideClickApiRefPage from "../useOutsideClickApiRefPage/useOutsideClickApiRefPage";
 import UseMouseMoveApiRefPage from "../useMouseMoveApiRefPage/UseMouseMoveApiRefPage";
 import UseScrollApiRefPage from "../useScrollApiRefPage/UseScrollApiRefPage";
-import UseMountedValueApiRef from "../useMountedValueApiRefPage/UseMountedValueApiRef";
+import UseMountedValue from "../useMountedValue/UseMountedValue";
 import UseWindowDimensionApiRef from "../useWindowDimensionRefPage/UseWindowDimensionApiRef";
 
 const Redirect = () => {
@@ -113,9 +113,21 @@ export const PUBLIC_PATHS = [
     restricted: true,
   },
   {
+    name: "UseMountedValue",
+    path: "/docs/use-mounted-value",
+    component: UseMountedValue,
+    restricted: true,
+  },
+  {
     name: "Interpolate",
     path: "/docs/interpolate",
     component: Interpolate,
+    restricted: true,
+  },
+  {
+    name: "ScrollableBlock",
+    path: "/docs/scrollable-block",
+    component: ScrollableBlock,
     restricted: true,
   },
   {
@@ -149,12 +161,6 @@ export const PUBLIC_PATHS = [
     restricted: true,
   },
   {
-    name: "useAnimatedValue()",
-    path: "/docs/api-ref/use-animated-value",
-    component: UseAnimatedValueApiRefPage,
-    restricted: true,
-  },
-  {
     name: "interpolate()",
     path: "/docs/api-ref/interpolate",
     component: InterpolateApiRefPage,
@@ -176,12 +182,6 @@ export const PUBLIC_PATHS = [
     name: "useScroll()",
     path: "/docs/api-ref/use-scroll",
     component: UseScrollApiRefPage,
-    restricted: true,
-  },
-  {
-    name: "useMountedValue()",
-    path: "/docs/api-ref/use-mounted-value",
-    component: UseMountedValueApiRef,
     restricted: true,
   },
   {

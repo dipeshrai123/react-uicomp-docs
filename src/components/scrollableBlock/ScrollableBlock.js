@@ -4,14 +4,14 @@ import Paragraph from "../common/paragraph/Paragraph";
 // import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 // import Code from "../common/code/Code.common";
 
-const UseAnimatedValueApiRefPage = () => {
+const ScrollableBlock = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div>
-      <Title>useAnimatedValue()</Title>
+      <Title>ScrollableBlock</Title>
       <section>
         <Paragraph>Coming soon...</Paragraph>
       </section>
@@ -19,4 +19,4 @@ const UseAnimatedValueApiRefPage = () => {
   );
 };
 
-export default UseAnimatedValueApiRefPage;
+export default ScrollableBlock;

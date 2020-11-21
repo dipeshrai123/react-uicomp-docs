@@ -105,19 +105,19 @@ const App = () => {
     const theme = activeTheme === "light" ? lightTheme : darkTheme;
     
     const toggleTheme = () => {
-        setActiveTheme(prev => prev === "light" ? darkTheme : lightTheme);
+      setActiveTheme(prev => prev === "light" ? darkTheme : lightTheme);
     }
     
     return (
-    	<Navigation.Provider>
-        	<Theme.Provider theme={theme} toggleTheme={toggleTheme}>
-            	<Auth.Provider>
-                	<Auth.Screens />
-                </Auth.Provider>
-            </Theme.Provider>
-        </Navigation.Provider>
+      <Theme.Provider theme={theme} toggleTheme={toggleTheme}>
+        <Auth.Provider>
+          <Auth.Screens />
+        </Auth.Provider>
+      </Theme.Provider>
     )
 };
+
+...
           `}
         </Code>
       </section>

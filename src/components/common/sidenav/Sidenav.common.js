@@ -46,8 +46,8 @@ const Sidenav = () => {
           },
           { name: "AnimatedBlock", link: "/docs/animated-block" },
           { name: "interpolate()", link: "/docs/interpolate" },
-          // { name: "mix()", link: "/docs/mix" },
-          // { name: "useScroll()", link: "/docs/use-scroll" },
+          { name: "useMountedValue()", link: "/docs/use-mounted-value" },
+          { name: "ScrollableBlock", link: "/docs/scrollable-block" },
           // { name: "useMeasure()", link: "/docs/use-measure" },
           // { name: "useMouseMove()", link: "/docs/use-mousemove" },
           // { name: "useDrag()", link: "/docs/use-drag" },
@@ -65,43 +65,6 @@ const Sidenav = () => {
           { name: "DropdownMenu", link: "/docs/dropdown-menu" },
           { name: "Modal", link: "/docs/modal" },
           { name: "Toast", link: "/docs/toast" },
-        ]}
-      />
-      <NavGroup
-        title="API Reference"
-        navItems={[
-          {
-            name: "useMeasure()",
-            link: "/docs/api-ref/use-measure",
-          },
-          {
-            name: "useAnimatedVallue()",
-            link: "/docs/api-ref/use-animated-value",
-          },
-          {
-            name: "interpolate()",
-            link: "/docs/api-ref/interpolate",
-          },
-          {
-            name: "useOutsideClick()",
-            link: "/docs/api-ref/use-outside-click",
-          },
-          {
-            name: "useMouseMove()",
-            link: "/docs/api-ref/use-mouse-move",
-          },
-          {
-            name: "useScroll()",
-            link: "/docs/api-ref/use-scroll",
-          },
-          {
-            name: "useMountedValue()",
-            link: "/docs/api-ref/use-mounted-value",
-          },
-          {
-            name: "useWindowDimension()",
-            link: "/docs/api-ref/use-window-dimension",
-          },
         ]}
       />
     </div>

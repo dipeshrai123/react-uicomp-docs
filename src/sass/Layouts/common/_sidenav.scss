@@ -10,7 +10,7 @@
   overflow-y: auto;
   @include scrollbar(4px, $defaultborder, $light_grey, $defaultborder);
   padding-bottom: 85px;
-  
+
   &__nav-group {
     margin: 20px 0;
   }
@@ -20,11 +20,29 @@
     font-family: $avertaSemiBold;
     cursor: pointer;
     color: $black;
+    display: flex;
+    justify-content: space-between;
+
+    .sidenav-title {
+      user-select: none;
+    }
+
+    .dropdownicon {
+      color: $black;
+      position: relative;
+      top: 2px;
+      transition: transform 0.2s;
+
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
   }
 
   &__navitems {
     list-style: none;
     margin-top: 5px;
+    user-select: none;
   }
 
   &__navitem {
@@ -41,7 +59,7 @@
     display: block;
     border-radius: 4px;
     padding: 8px 10px;
-    transition: background .2s, color .2s;
+    transition: background 0.2s, color 0.2s;
 
     &:hover {
       background: $highlight_blue;

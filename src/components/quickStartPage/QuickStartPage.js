@@ -14,14 +14,14 @@ const QuickStartPage = () => {
       <Title>Quick Start</Title>
       <section>
         <Paragraph>
-          When it comes to authentication and routing for multiple users in the
-          same application the codebase gets messy with similar logic
-          everywhere. And also implementing good quality animations would be
-          quite complicated and requires lots of initial set up. React UI Comp
-          is built from ground up to solve these problems.
+          Implementing good quality animations and creating reusable components
+          over and over again would be quite complicated and requires lots of
+          initial set up. React UI Comp provides you very useful components and
+          animation tools which helps you to build incredible UI and user
+          experience.
         </Paragraph>
         <Paragraph>
-          What follows within the Fundamentals section of this documentation is
+          What follows within the fundamentals section of this documentation is
           a tour of the most important aspects of React UI Comp. It should cover
           enough for you to know how to build your typical react application,
           and give you the background that you need to dive deeper into the more
@@ -39,21 +39,10 @@ const QuickStartPage = () => {
       </section>
       <section>
         <SecondaryTitle>Installation</SecondaryTitle>
-        <Paragraph>
-          React UI Comp requires
-          <b>
-            {" "}
-            <span className="highlight">react 16.13.1</span> or later,{" "}
-            <span className="highlight">react-dom 16.13.1</span> or later,{" "}
-            <span className="highlight">react-router-dom 5.2.0</span> or later.
-          </b>
-        </Paragraph>
-        <Paragraph>To use React UI Comp with your React App.</Paragraph>
         <Code>{`
 // npm
-npm install react-uicomp`}</Code>
-        <Paragraph>or</Paragraph>
-        <Code>{`
+npm install react-uicomp
+
 // yarn
 yarn add react-uicomp`}</Code>
       </section>

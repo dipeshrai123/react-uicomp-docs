@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import {
-  ActiveLink,
-  useMeasure,
-  useAnimatedValue,
-  AnimatedBlock,
-} from "react-uicomp";
+import { BsFillCaretDownFill } from "react-icons/all";
+import { ActiveLink } from "react-auth-navigation";
+import { useMeasure, useAnimatedValue, AnimatedBlock } from "react-uicomp";
 
 const NavGroup = ({ title, navItems }) => {
   const { handler, height } = useMeasure();
@@ -14,7 +11,11 @@ const NavGroup = ({ title, navItems }) => {
   return (
     <div className="sidenav__nav-group">
       <h3 className="sidenav__title" onClick={() => setExpanded(!expanded)}>
-        {title}
+        <span className="sidenav-title">{title}</span>
+
+        <span className={expanded ? "dropdownicon active" : "dropdownicon"}>
+          <BsFillCaretDownFill size={12} />
+        </span>
       </h3>
       <AnimatedBlock
         style={{

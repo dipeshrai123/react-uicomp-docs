@@ -16,28 +16,6 @@ const Sidenav = () => {
         ]}
       />
       <NavGroup
-        title="Routing"
-        navItems={[
-          {
-            name: "Navigation",
-            link: "/docs/navigation",
-          },
-          { name: "Auth", link: "/docs/auth" },
-          { name: "useNavigation()", link: "/docs/use-navigation" },
-          { name: "useAuth()", link: "/docs/use-auth" },
-        ]}
-      />
-      <NavGroup
-        title="Theming"
-        navItems={[
-          {
-            name: "Theme",
-            link: "/docs/theme",
-          },
-          { name: "useTheme()", link: "/docs/use-theme" },
-        ]}
-      />
-      <NavGroup
         title="Animation"
         navItems={[
           {

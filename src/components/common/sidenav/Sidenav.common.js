@@ -1,10 +1,16 @@
 import React from "react";
+import {
+  AnimatedBlock,
+  useAuth,
+  useMountedValue,
+  interpolate,
+} from "react-uicomp";
 
 import NavGroup from "./components/NavGroup.component";
 
 const Sidenav = () => {
   return (
-    <div className="sidenav">
+    <>
       <NavGroup
         title="Introduction"
         navItems={[
@@ -15,6 +21,7 @@ const Sidenav = () => {
           },
         ]}
       />
+
       <NavGroup
         title="Animation"
         navItems={[
@@ -33,6 +40,7 @@ const Sidenav = () => {
           // { name: "useOutsideClick()", link: "/docs/use-outside-click" },
         ]}
       />
+
       <NavGroup
         title="Components"
         navItems={[
@@ -45,8 +53,39 @@ const Sidenav = () => {
           { name: "Toast", link: "/docs/toast" },
         ]}
       />
+    </>
+  );
+};
+
+const SideNavComp = () => {
+  const { drawerOpen } = useAuth();
+  const mountedValue = useMountedValue(drawerOpen, [0, 1, 0]);
+
+  return (
+    <div className="sidenav">
+      <div className="sidenav-web">
+        <Sidenav />
+      </div>
+
+      {mountedValue(
+        (animation, mounted) =>
+          mounted && (
+            <AnimatedBlock
+              style={{
+                transform: interpolate(
+                  animation.value,
+                  [0, 1],
+                  ["translateX(-280px)", "translateX(0px)"]
+                ),
+              }}
+              className="sidenav-mobile"
+            >
+              <Sidenav />
+            </AnimatedBlock>
+          )
+      )}
     </div>
   );
 };
 
-export default Sidenav;
+export default SideNavComp;

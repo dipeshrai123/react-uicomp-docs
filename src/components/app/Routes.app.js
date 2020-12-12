@@ -16,12 +16,12 @@ import DropdownPage from "../dropdownPage/DropdownPage";
 import DropdownMenuPage from "../dropdownMenuPage/DropdownMenuPage";
 import ModalPage from "../modalPage/ModalPage";
 import ToastPage from "../toastPage/ToastPage";
-import UseMeasureApiRefPage from "../useMeasureApiRefPage/UseMeasureApiRefPage";
+import UseMeasurePage from "../useMeasurePage/UseMeasurePage";
 import ScrollableBlock from "../scrollableBlock/ScrollableBlock";
 import InterpolateApiRefPage from "../interpolateApiRefPage/interpolateApiRefPage";
 import UseOutsideClickApiRefPage from "../useOutsideClickApiRefPage/useOutsideClickApiRefPage";
 import UseMouseMoveApiRefPage from "../useMouseMoveApiRefPage/UseMouseMoveApiRefPage";
-import UseScrollApiRefPage from "../useScrollApiRefPage/UseScrollApiRefPage";
+import UseScrollPage from "../useScrollPage/UseScrollPage";
 import UseMountedValue from "../useMountedValue/UseMountedValue";
 import UseWindowDimensionApiRef from "../useWindowDimensionRefPage/UseWindowDimensionApiRef";
 
@@ -131,6 +131,19 @@ export const PUBLIC_PATHS = [
     restricted: true,
   },
   {
+    name: "useScroll()",
+    path: "/docs/use-scroll",
+    component: UseScrollPage,
+    restricted: true,
+  },
+  {
+    name: "useMeasure",
+    path: "/docs/use-measure",
+    component: UseMeasurePage,
+    restricted: true,
+  },
+  // UI COMPONENTS
+  {
     name: "Dropdown",
     path: "/docs/dropdown",
     component: DropdownPage,
@@ -155,12 +168,6 @@ export const PUBLIC_PATHS = [
     restricted: true,
   },
   {
-    name: "useMeasure",
-    path: "/docs/api-ref/use-measure",
-    component: UseMeasureApiRefPage,
-    restricted: true,
-  },
-  {
     name: "interpolate()",
     path: "/docs/api-ref/interpolate",
     component: InterpolateApiRefPage,
@@ -176,12 +183,6 @@ export const PUBLIC_PATHS = [
     name: "useMouseMove()",
     path: "/docs/api-ref/use-mouse-move",
     component: UseMouseMoveApiRefPage,
-    restricted: true,
-  },
-  {
-    name: "useScroll()",
-    path: "/docs/api-ref/use-scroll",
-    component: UseScrollApiRefPage,
     restricted: true,
   },
   {

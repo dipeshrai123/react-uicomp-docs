@@ -26,9 +26,9 @@ const Sidenav = () => {
           { name: "interpolate()", link: "/docs/interpolate" },
           { name: "useMountedValue()", link: "/docs/use-mounted-value" },
           { name: "ScrollableBlock", link: "/docs/scrollable-block" },
-          // { name: "useMeasure()", link: "/docs/use-measure" },
+          { name: "useScroll()", link: "/docs/use-scroll" },
+          { name: "useMeasure()", link: "/docs/use-measure" },
           // { name: "useMouseMove()", link: "/docs/use-mousemove" },
-          // { name: "useDrag()", link: "/docs/use-drag" },
           // { name: "useWindowDimension()", link: "/docs/use-window-dimension" },
           // { name: "useOutsideClick()", link: "/docs/use-outside-click" },
         ]}

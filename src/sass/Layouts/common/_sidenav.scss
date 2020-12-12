@@ -1,15 +1,41 @@
 .sidenav {
-  position: fixed;
-  width: 280px;
-  height: 100%;
-  background-color: $white;
-  z-index: 9;
-  border-right: 1px solid $defaultborder;
-  padding: 20px;
-  top: 75px;
-  overflow-y: auto;
-  @include scrollbar(4px, $defaultborder, $light_grey, $defaultborder);
-  padding-bottom: 85px;
+  &-web {
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    background-color: $white;
+    z-index: 9;
+    border-right: 1px solid $defaultborder;
+    padding: 20px;
+    top: 75px;
+    overflow-y: auto;
+    @include scrollbar(4px, $defaultborder, $light_grey, $defaultborder);
+    padding-bottom: 85px;
+    display: block;
+
+    @media all and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &-mobile {
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    background-color: $white;
+    z-index: 9;
+    border-right: 1px solid $defaultborder;
+    padding: 20px;
+    top: 75px;
+    overflow-y: auto;
+    @include scrollbar(4px, $defaultborder, $light_grey, $defaultborder);
+    padding-bottom: 85px;
+    display: none;
+
+    @media all and (max-width: 768px) {
+      display: none;
+    }
+  }
 
   &__nav-group {
     margin: 20px 0;

@@ -4,7 +4,7 @@ import NavGroup from "./components/NavGroup.component";
 
 const Sidenav = () => {
   return (
-    <div className="sidenav">
+    <>
       <NavGroup
         title="Introduction"
         navItems={[
@@ -15,6 +15,7 @@ const Sidenav = () => {
           },
         ]}
       />
+
       <NavGroup
         title="Animation"
         navItems={[
@@ -33,6 +34,7 @@ const Sidenav = () => {
           // { name: "useOutsideClick()", link: "/docs/use-outside-click" },
         ]}
       />
+
       <NavGroup
         title="Components"
         navItems={[
@@ -45,8 +47,22 @@ const Sidenav = () => {
           { name: "Toast", link: "/docs/toast" },
         ]}
       />
+    </>
+  );
+};
+
+const SideNavComp = () => {
+  return (
+    <div className="sidenav">
+      <div className="sidenav-web">
+        <Sidenav />
+      </div>
+
+      <div className="sidenav-mobile">
+        <Sidenav />
+      </div>
     </div>
   );
 };
 
-export default Sidenav;
+export default SideNavComp;

@@ -2,4 +2,8 @@
   margin-top: 75px;
   margin-left: 280px;
   padding: 40px;
+
+  @media all and (max-width: 768px) {
+    margin-left: 0px;
+  }
 }

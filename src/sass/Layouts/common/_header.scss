@@ -12,6 +12,20 @@
   background-color: $white;
   overflow: hidden;
 
+  &__menu {
+    font-size: 40px;
+    position: relative;
+    top: 6px;
+    margin-right: 20px;
+    color: #353535;
+    cursor: pointer;
+    display: none;
+
+    @media all and (max-width: 768px) {
+      display: block;
+    }
+  }
+
   &__wrapper {
     padding: 20px;
     display: flex;

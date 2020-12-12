@@ -1,4 +1,10 @@
 import React from "react";
+import {
+  AnimatedBlock,
+  useAuth,
+  useMountedValue,
+  interpolate,
+} from "react-uicomp";
 
 import NavGroup from "./components/NavGroup.component";
 
@@ -52,15 +58,32 @@ const Sidenav = () => {
 };
 
 const SideNavComp = () => {
+  const { drawerOpen } = useAuth();
+  const mountedValue = useMountedValue(drawerOpen, [0, 1, 0]);
+
   return (
     <div className="sidenav">
       <div className="sidenav-web">
         <Sidenav />
       </div>
 
-      <div className="sidenav-mobile">
-        <Sidenav />
-      </div>
+      {mountedValue(
+        (animation, mounted) =>
+          mounted && (
+            <AnimatedBlock
+              style={{
+                transform: interpolate(
+                  animation.value,
+                  [0, 1],
+                  ["translateX(-280px)", "translateX(0px)"]
+                ),
+              }}
+              className="sidenav-mobile"
+            >
+              <Sidenav />
+            </AnimatedBlock>
+          )
+      )}
     </div>
   );
 };

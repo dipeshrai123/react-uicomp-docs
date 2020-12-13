@@ -47,7 +47,7 @@ const UseScrollApiRefPage = () => {
             <span className="highlight">
               <b>ScrollDirectionState</b>
             </span>{" "}
-            enum with {`<UP | DOWN | RIGHT | LEFT | UNDETERMINED>`} is used to
+            enum with {`"UP | DOWN | RIGHT | LEFT | UNDETERMINED"`} is used to
             compare with it.
           </li>
           <li className="list__item">
@@ -84,6 +84,36 @@ export default function UseAnimatedValue() {
 
   return (
     // ...
+  );
+}
+       `}
+        </Code>
+        <Paragraph>
+          To bind useScroll() hook to a specific element, you just have to bind
+          it to that element. To bind it, it returns a function with can be
+          spread into an element.
+        </Paragraph>
+        <Code>
+          {`
+import React from "react";
+import { useScroll, ScrollDirectionState } from "react-uicomp";
+
+export default function UseAnimatedValue() {
+  const bind = useScroll((event) => { // bind is a function
+    const { scrollX, scrollDirection } = event;
+
+    if(scrollDirection === ScrollDirectionState.RIGHT) {
+      console.log("DOCUMENT IS SCROLLING RIGHT", scrollX);
+    }
+  });
+
+  return (
+    <>
+      // ...
+      <div {...bind()}> // spread here, if its content is scrolled then above callback is called.
+        // ...
+      </div>
+    </>
   );
 }
        `}

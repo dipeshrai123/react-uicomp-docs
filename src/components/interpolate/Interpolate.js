@@ -16,18 +16,16 @@ const Interpolate = () => {
       <section>
         <Paragraph>
           The basic concept of interpolate is to map the given value to another
-          value based on given input and output range. For eg: Let’s say you
-          want to change the opacity property from 0 to 1 when we scroll the
-          document from 0 to 500. Making these kinds of interpolation is very
-          convenient to make lots of different amazing animations.
+          value based on given input and output range.
         </Paragraph>
         <Paragraph>
-          React UI Comp also provides a utility function interpolate() which can
-          interpolate both animated nodes and normal numeric values from a given
-          set of input range to output range. Output ranges can be string or
-          numbers. By default, the value is extrapolated beyond the output range
-          in case of numbers. It can be clamped to left / right or both
-          according to your need.
+          React UI Comp also provides a utility function{" "}
+          <span className="highlight">interpolate()</span> which can interpolate
+          both animated nodes and normal numeric values from a given set of
+          input range to output range. Output ranges can be string or numbers.
+          By default, the value is extrapolated beyond the output range in case
+          of numbers. It can be clamped to left / right or both according to
+          your need.
         </Paragraph>
         <Paragraph>
           A basic mapping of a animated node from input range 0 to 1 to 0 to 500

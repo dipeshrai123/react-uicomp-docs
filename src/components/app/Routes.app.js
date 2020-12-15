@@ -18,12 +18,12 @@ import ModalPage from "../modalPage/ModalPage";
 import ToastPage from "../toastPage/ToastPage";
 import UseMeasurePage from "../useMeasurePage/UseMeasurePage";
 import ScrollableBlock from "../scrollableBlock/ScrollableBlock";
-import InterpolateApiRefPage from "../interpolateApiRefPage/interpolateApiRefPage";
-import UseOutsideClickApiRefPage from "../useOutsideClickApiRefPage/useOutsideClickApiRefPage";
-import UseMouseMoveApiRefPage from "../useMouseMoveApiRefPage/UseMouseMoveApiRefPage";
+// import InterpolateApiRefPage from "../interpolateApiRefPage/interpolateApiRefPage";
+// import UseMouseMoveApiRefPage from "../useMouseMoveApiRefPage/UseMouseMoveApiRefPage";
+import UseOutsideClick from "../useOutsideClick/useOutsideClick";
 import UseScrollPage from "../useScrollPage/UseScrollPage";
 import UseMountedValue from "../useMountedValue/UseMountedValue";
-import UseWindowDimensionApiRef from "../useWindowDimensionRefPage/UseWindowDimensionApiRef";
+import UseWindowDimension from "../useWindowDimension/UseWindowDimension";
 
 const Redirect = () => {
   const { navigation } = useNavigation();
@@ -131,7 +131,7 @@ export const PUBLIC_PATHS = [
     restricted: true,
   },
   {
-    name: "useScroll()",
+    name: "useScroll",
     path: "/docs/use-scroll",
     component: UseScrollPage,
     restricted: true,
@@ -140,6 +140,18 @@ export const PUBLIC_PATHS = [
     name: "useMeasure",
     path: "/docs/use-measure",
     component: UseMeasurePage,
+    restricted: true,
+  },
+  {
+    name: "useWindowDimension",
+    path: "/docs/use-window-dimension",
+    component: UseWindowDimension,
+    restricted: true,
+  },
+  {
+    name: "useOutsideClick",
+    path: "/docs/use-outside-click",
+    component: UseOutsideClick,
     restricted: true,
   },
   // UI COMPONENTS
@@ -167,30 +179,18 @@ export const PUBLIC_PATHS = [
     component: ToastPage,
     restricted: true,
   },
-  {
-    name: "interpolate()",
-    path: "/docs/api-ref/interpolate",
-    component: InterpolateApiRefPage,
-    restricted: true,
-  },
-  {
-    name: "useOutsideClick()",
-    path: "/docs/api-ref/use-outside-click",
-    component: UseOutsideClickApiRefPage,
-    restricted: true,
-  },
-  {
-    name: "useMouseMove()",
-    path: "/docs/api-ref/use-mouse-move",
-    component: UseMouseMoveApiRefPage,
-    restricted: true,
-  },
-  {
-    name: "useMountedValue()",
-    path: "/docs/api-ref/use-window-dimension",
-    component: UseWindowDimensionApiRef,
-    restricted: true,
-  },
+  // {
+  //   name: "interpolate()",
+  //   path: "/docs/api-ref/interpolate",
+  //   component: InterpolateApiRefPage,
+  //   restricted: true,
+  // },
+  // {
+  //   name: "useMouseMove()",
+  //   path: "/docs/api-ref/use-mouse-move",
+  //   component: UseMouseMoveApiRefPage,
+  //   restricted: true,
+  // },
   {
     path: null,
     component: NotFoundPage,

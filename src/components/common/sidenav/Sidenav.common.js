@@ -35,9 +35,9 @@ const Sidenav = () => {
           { name: "ScrollableBlock", link: "/docs/scrollable-block" },
           { name: "useScroll()", link: "/docs/use-scroll" },
           { name: "useMeasure()", link: "/docs/use-measure" },
+          { name: "useWindowDimension()", link: "/docs/use-window-dimension" },
+          { name: "useOutsideClick()", link: "/docs/use-outside-click" },
           // { name: "useMouseMove()", link: "/docs/use-mousemove" },
-          // { name: "useWindowDimension()", link: "/docs/use-window-dimension" },
-          // { name: "useOutsideClick()", link: "/docs/use-outside-click" },
         ]}
       />
 

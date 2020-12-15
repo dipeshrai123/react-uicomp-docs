@@ -83,7 +83,7 @@ export default function UseAnimatedValue() {
   return (
     <>
       // ...
-      <div {...bind()}> // spread here, if its content is scrolled then above callback is called.
+      <div {...bind()}> // spread here
         // ...
       </div>
     </>

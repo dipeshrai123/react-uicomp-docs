@@ -73,7 +73,7 @@ const UseScrollApiRefPage = () => {
 import React from "react";
 import { useScroll, ScrollDirectionState } from "react-uicomp";
 
-export default function UseAnimatedValue() {
+export default function Example() {
   useScroll((event) => {
     const { scrollX, scrollDirection } = event;
 
@@ -98,7 +98,7 @@ export default function UseAnimatedValue() {
 import React from "react";
 import { useScroll, ScrollDirectionState } from "react-uicomp";
 
-export default function UseAnimatedValue() {
+export default function Example() {
   const bind = useScroll((event) => { // bind is a function
     const { scrollX, scrollDirection } = event;
 

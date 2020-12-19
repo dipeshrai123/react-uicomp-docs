@@ -72,7 +72,7 @@ const UseMeasurePage = () => {
 import React from "react";
 import { useMeasure } from "react-uicomp";
 
-export default function UseAnimatedValue() {
+export default function Example() {
   const bind = useMeasure((event) => { // bind is a function
     const { width, height } = event;
 
@@ -106,7 +106,7 @@ export default function UseAnimatedValue() {
 import React from "react";
 import { useMeasure } from "react-uicomp";
 
-export default function UseAnimatedValue() {
+export default function Example() {
   const bind = useMeasure((event) => { // bind is a function
     const { width, height } = event;
 

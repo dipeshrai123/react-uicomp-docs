@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useNavigation } from "react-uicomp";
+import { useNavigation } from "react-auth-navigation";
 import NotFoundPage from "../notFoundPage/NotFoundPage";
 import QuickStartPage from "../quickStartPage/QuickStartPage";
 import WhyUse from "../whyUse/WhyUse";

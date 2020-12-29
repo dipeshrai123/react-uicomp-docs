@@ -1,10 +1,7 @@
 import React from "react";
-import {
-  AnimatedBlock,
-  useAnimatedValue,
-  interpolate,
-  useAuth,
-} from "react-uicomp";
+import { AnimatedBlock, useAnimatedValue, interpolate } from "react-uicomp";
+
+import { useAuth } from "react-auth-navigation";
 
 const styles = {
   container: {

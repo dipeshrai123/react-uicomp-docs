@@ -1,5 +1,5 @@
 import React from "react";
-import { useAuth } from "react-uicomp";
+import { useAuth } from "react-auth-navigation";
 import HamburderMenu from "../hamburgerMenu/HamburgerMenu.common";
 import Logo from "../../../assets/icons/react-uicomp.svg";
 

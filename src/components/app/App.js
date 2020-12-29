@@ -1,5 +1,5 @@
 import React from "react";
-import { Auth, withNavigation } from "react-uicomp";
+import { Auth, withNavigation } from "react-auth-navigation";
 import { PUBLIC_PATHS } from "./Routes.app";
 
 import Header from "../common/header/Header.common";

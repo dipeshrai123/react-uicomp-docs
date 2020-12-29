@@ -1,10 +1,6 @@
 import React from "react";
-import {
-  AnimatedBlock,
-  useAuth,
-  useMountedValue,
-  interpolate,
-} from "react-uicomp";
+import { AnimatedBlock, useMountedValue, interpolate } from "react-uicomp";
+import { useAuth } from "react-auth-navigation";
 
 import NavGroup from "./components/NavGroup.component";
 

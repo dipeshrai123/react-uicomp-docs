@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useNavigation } from "react-uicomp";
+import { useNavigation } from "react-auth-navigation";
 import NotFoundPage from "../notFoundPage/NotFoundPage";
 import QuickStartPage from "../quickStartPage/QuickStartPage";
 import WhyUse from "../whyUse/WhyUse";
@@ -16,14 +16,14 @@ import DropdownPage from "../dropdownPage/DropdownPage";
 import DropdownMenuPage from "../dropdownMenuPage/DropdownMenuPage";
 import ModalPage from "../modalPage/ModalPage";
 import ToastPage from "../toastPage/ToastPage";
-import UseMeasureApiRefPage from "../useMeasureApiRefPage/UseMeasureApiRefPage";
-import UseAnimatedValueApiRefPage from "../useAnimatedValueApiRefPage/UseAnimatedValueApiRefPage";
-import InterpolateApiRefPage from "../interpolateApiRefPage/interpolateApiRefPage";
-import UseOutsideClickApiRefPage from "../useOutsideClickApiRefPage/useOutsideClickApiRefPage";
-import UseMouseMoveApiRefPage from "../useMouseMoveApiRefPage/UseMouseMoveApiRefPage";
-import UseScrollApiRefPage from "../useScrollApiRefPage/UseScrollApiRefPage";
-import UseMountedValueApiRef from "../useMountedValueApiRefPage/UseMountedValueApiRef";
-import UseWindowDimensionApiRef from "../useWindowDimensionRefPage/UseWindowDimensionApiRef";
+import UseMeasurePage from "../useMeasurePage/UseMeasurePage";
+import ScrollableBlock from "../scrollableBlock/ScrollableBlock";
+// import InterpolateApiRefPage from "../interpolateApiRefPage/interpolateApiRefPage";
+// import UseMouseMoveApiRefPage from "../useMouseMoveApiRefPage/UseMouseMoveApiRefPage";
+import UseOutsideClick from "../useOutsideClick/useOutsideClick";
+import UseScrollPage from "../useScrollPage/UseScrollPage";
+import UseMountedValue from "../useMountedValue/UseMountedValue";
+import UseWindowDimension from "../useWindowDimension/UseWindowDimension";
 
 const Redirect = () => {
   const { navigation } = useNavigation();
@@ -113,11 +113,48 @@ export const PUBLIC_PATHS = [
     restricted: true,
   },
   {
+    name: "UseMountedValue",
+    path: "/docs/use-mounted-value",
+    component: UseMountedValue,
+    restricted: true,
+  },
+  {
     name: "Interpolate",
     path: "/docs/interpolate",
     component: Interpolate,
     restricted: true,
   },
+  {
+    name: "ScrollableBlock",
+    path: "/docs/scrollable-block",
+    component: ScrollableBlock,
+    restricted: true,
+  },
+  {
+    name: "useScroll",
+    path: "/docs/use-scroll",
+    component: UseScrollPage,
+    restricted: true,
+  },
+  {
+    name: "useMeasure",
+    path: "/docs/use-measure",
+    component: UseMeasurePage,
+    restricted: true,
+  },
+  {
+    name: "useWindowDimension",
+    path: "/docs/use-window-dimension",
+    component: UseWindowDimension,
+    restricted: true,
+  },
+  {
+    name: "useOutsideClick",
+    path: "/docs/use-outside-click",
+    component: UseOutsideClick,
+    restricted: true,
+  },
+  // UI COMPONENTS
   {
     name: "Dropdown",
     path: "/docs/dropdown",
@@ -142,54 +179,18 @@ export const PUBLIC_PATHS = [
     component: ToastPage,
     restricted: true,
   },
-  {
-    name: "useMeasure",
-    path: "/docs/api-ref/use-measure",
-    component: UseMeasureApiRefPage,
-    restricted: true,
-  },
-  {
-    name: "useAnimatedValue()",
-    path: "/docs/api-ref/use-animated-value",
-    component: UseAnimatedValueApiRefPage,
-    restricted: true,
-  },
-  {
-    name: "interpolate()",
-    path: "/docs/api-ref/interpolate",
-    component: InterpolateApiRefPage,
-    restricted: true,
-  },
-  {
-    name: "useOutsideClick()",
-    path: "/docs/api-ref/use-outside-click",
-    component: UseOutsideClickApiRefPage,
-    restricted: true,
-  },
-  {
-    name: "useMouseMove()",
-    path: "/docs/api-ref/use-mouse-move",
-    component: UseMouseMoveApiRefPage,
-    restricted: true,
-  },
-  {
-    name: "useScroll()",
-    path: "/docs/api-ref/use-scroll",
-    component: UseScrollApiRefPage,
-    restricted: true,
-  },
-  {
-    name: "useMountedValue()",
-    path: "/docs/api-ref/use-mounted-value",
-    component: UseMountedValueApiRef,
-    restricted: true,
-  },
-  {
-    name: "useMountedValue()",
-    path: "/docs/api-ref/use-window-dimension",
-    component: UseWindowDimensionApiRef,
-    restricted: true,
-  },
+  // {
+  //   name: "interpolate()",
+  //   path: "/docs/api-ref/interpolate",
+  //   component: InterpolateApiRefPage,
+  //   restricted: true,
+  // },
+  // {
+  //   name: "useMouseMove()",
+  //   path: "/docs/api-ref/use-mouse-move",
+  //   component: UseMouseMoveApiRefPage,
+  //   restricted: true,
+  // },
   {
     path: null,
     component: NotFoundPage,

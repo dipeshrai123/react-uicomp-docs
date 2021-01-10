@@ -1,10 +1,12 @@
 import React from "react";
+import { AnimatedBlock, useMountedValue, interpolate } from "react-uicomp";
+import { useAuth } from "react-auth-navigation";
 
 import NavGroup from "./components/NavGroup.component";
 
 const Sidenav = () => {
   return (
-    <div className="sidenav">
+    <>
       <NavGroup
         title="Introduction"
         navItems={[
@@ -15,28 +17,7 @@ const Sidenav = () => {
           },
         ]}
       />
-      <NavGroup
-        title="Routing"
-        navItems={[
-          {
-            name: "Navigation",
-            link: "/docs/navigation",
-          },
-          { name: "Auth", link: "/docs/auth" },
-          { name: "useNavigation()", link: "/docs/use-navigation" },
-          { name: "useAuth()", link: "/docs/use-auth" },
-        ]}
-      />
-      <NavGroup
-        title="Theming"
-        navItems={[
-          {
-            name: "Theme",
-            link: "/docs/theme",
-          },
-          { name: "useTheme()", link: "/docs/use-theme" },
-        ]}
-      />
+
       <NavGroup
         title="Animation"
         navItems={[
@@ -46,15 +27,16 @@ const Sidenav = () => {
           },
           { name: "AnimatedBlock", link: "/docs/animated-block" },
           { name: "interpolate()", link: "/docs/interpolate" },
-          // { name: "mix()", link: "/docs/mix" },
-          // { name: "useScroll()", link: "/docs/use-scroll" },
-          // { name: "useMeasure()", link: "/docs/use-measure" },
+          { name: "useMountedValue()", link: "/docs/use-mounted-value" },
+          { name: "ScrollableBlock", link: "/docs/scrollable-block" },
+          { name: "useScroll()", link: "/docs/use-scroll" },
+          { name: "useMeasure()", link: "/docs/use-measure" },
+          { name: "useWindowDimension()", link: "/docs/use-window-dimension" },
+          { name: "useOutsideClick()", link: "/docs/use-outside-click" },
           // { name: "useMouseMove()", link: "/docs/use-mousemove" },
-          // { name: "useDrag()", link: "/docs/use-drag" },
-          // { name: "useWindowDimension()", link: "/docs/use-window-dimension" },
-          // { name: "useOutsideClick()", link: "/docs/use-outside-click" },
         ]}
       />
+
       <NavGroup
         title="Components"
         navItems={[
@@ -67,57 +49,39 @@ const Sidenav = () => {
           { name: "Toast", link: "/docs/toast" },
         ]}
       />
-      <NavGroup
-        title="Components"
-        navItems={[
-          {
-            name: "Dropdown",
-            link: "/docs/dropdown",
-          },
-          { name: "DropdownMenu", link: "/docs/dropdown-menu" },
-          { name: "Modal", link: "/docs/modal" },
-          { name: "Toast", link: "/docs/toast" },
-        ]}
-      />
-      <NavGroup
-        title="API Reference"
-        navItems={[
-          {
-            name: "useMeasure()",
-            link: "/docs/api-ref/use-measure",
-          },
-          {
-            name: "useAnimatedVallue()",
-            link: "/docs/api-ref/use-animated-value",
-          },
-          {
-            name: "interpolate()",
-            link: "/docs/api-ref/interpolate",
-          },
-          {
-            name: "useOutsideClick()",
-            link: "/docs/api-ref/use-outside-click",
-          },
-          {
-            name: "useMouseMove()",
-            link: "/docs/api-ref/use-mouse-move",
-          },
-          {
-            name: "useScroll()",
-            link: "/docs/api-ref/use-scroll",
-          },
-          {
-            name: "useMountedValue()",
-            link: "/docs/api-ref/use-mounted-value",
-          },
-          {
-            name: "useWindowDimension()",
-            link: "/docs/api-ref/use-window-dimension",
-          },
-        ]}
-      />
+    </>
+  );
+};
+
+const SideNavComp = () => {
+  const { drawerOpen } = useAuth();
+  const mountedValue = useMountedValue(drawerOpen, [0, 1, 0]);
+
+  return (
+    <div className="sidenav">
+      <div className="sidenav-web">
+        <Sidenav />
+      </div>
+
+      {mountedValue(
+        (animation, mounted) =>
+          mounted && (
+            <AnimatedBlock
+              style={{
+                transform: interpolate(
+                  animation.value,
+                  [0, 1],
+                  ["translateX(-280px)", "translateX(0px)"]
+                ),
+              }}
+              className="sidenav-mobile"
+            >
+              <Sidenav />
+            </AnimatedBlock>
+          )
+      )}
     </div>
   );
 };
 
-export default Sidenav;
+export default SideNavComp;

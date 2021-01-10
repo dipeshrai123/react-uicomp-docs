@@ -70,12 +70,24 @@ const Auth = () => {
             <br />
             It returns all the authenticated screens based on the current state
             of a user and all the routes provided to{" "}
-            <b>{"withNavigation()"} </b>
-            HOC.
+            <span className="highlight">
+              <b>{"withNavigation()"}</b>
+            </span>{" "}
+            HOC. Component with Auth.Provider HOC should be wrapped with
+            withNavigation() hoc.
           </Paragraph>
           <Paragraph>
-            Component with Auth.Provider HOC should be wrapped with
-            withNavigation() hoc.
+            <Paragraph>It accepts one prop :</Paragraph>
+            <ol className="list list--nested list--alpha">
+              <li className="list__item">
+                <span className="highlight">
+                  <b>path (string)(optional)</b>
+                </span>
+                <br />
+                It is required for nested routes. By default its value is taken
+                as null or '/';
+              </li>
+            </ol>
             <Code>
               {`
 <Auth.Provider {...propsToThis}>

@@ -4,7 +4,10 @@ import { ActiveLink } from "react-auth-navigation";
 import { useMeasure, useAnimatedValue, AnimatedBlock } from "react-uicomp";
 
 const NavGroup = ({ title, navItems }) => {
-  const { handler, height } = useMeasure();
+  const [height, setHeight] = useState(0);
+  const bind = useMeasure(({ height: h }) => {
+    setHeight(h);
+  });
   const [expanded, setExpanded] = useState(true);
   const animatedHeight = useAnimatedValue(expanded ? height : 0);
 
@@ -24,7 +27,7 @@ const NavGroup = ({ title, navItems }) => {
         }}
       >
         <ul
-          {...handler}
+          {...bind()}
           className="sidenav__navitems"
           style={{ paddingBottom: 5 }}
         >

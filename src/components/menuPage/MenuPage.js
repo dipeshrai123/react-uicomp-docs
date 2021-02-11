@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Dropdown, DropdownMenu } from "react-uicomp";
+import { Dropdown, Menu } from "react-uicomp";
 import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
 import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
@@ -12,7 +12,7 @@ const DropdownMenuPage = () => {
 
   return (
     <div>
-      <Title>Dropdown Menu</Title>
+      <Title>Menu</Title>
       <section>
         <Paragraph>UI component for Dropdown Element</Paragraph>
       </section>
@@ -23,21 +23,21 @@ const DropdownMenuPage = () => {
         <Dropdown
           animationType="expand"
           placement="bottommiddle"
-          triggerElement={() => <button className="button">Toggle Menu</button>}
+          trigger={() => <button className="button">Toggle Menu</button>}
         >
-          <DropdownMenu.Container>
-            <DropdownMenu.Item onClick={() => false}>Item 1</DropdownMenu.Item>
-            <DropdownMenu.Item onClick={() => false}>Item 2</DropdownMenu.Item>
-            <DropdownMenu.Separator />
-            <DropdownMenu.Item onClick={() => false} danger={true}>
+          <Menu.Container>
+            <Menu.Item onClick={() => false}>Item 1</Menu.Item>
+            <Menu.Item onClick={() => false}>Item 2</Menu.Item>
+            <Menu.Separator />
+            <Menu.Item onClick={() => false} danger={true}>
               Item 3
-            </DropdownMenu.Item>
-          </DropdownMenu.Container>
+            </Menu.Item>
+          </Menu.Container>
         </Dropdown>
       </section>
 
       <section>
-        <SecondaryTitle>DropdownMenu.Container</SecondaryTitle>
+        <SecondaryTitle>Menu.Container</SecondaryTitle>
 
         <Paragraph>
           Wrapper for wrapping all the dropdown items for default styling
@@ -76,7 +76,7 @@ const DropdownMenuPage = () => {
       </section>
 
       <section>
-        <SecondaryTitle>DropdownMenu.Item</SecondaryTitle>
+        <SecondaryTitle>Menu.Item</SecondaryTitle>
 
         <Paragraph>
           It defines the menu items for{" "}
@@ -127,7 +127,7 @@ const DropdownMenuPage = () => {
       </section>
 
       <section>
-        <SecondaryTitle>DropdownMenu.Separator</SecondaryTitle>
+        <SecondaryTitle>Menu.Separator</SecondaryTitle>
 
         <Paragraph>
           It provides some default margin and padding to top and bottom with
@@ -140,8 +140,8 @@ const DropdownMenuPage = () => {
 
         <Paragraph>
           To achieve dropdown functionality use should wrap{" "}
-          <span className="highlight">DropdownMenu.Container</span> component
-          with <span className="highlight">Dropdown</span> component.
+          <span className="highlight">Menu.Container</span> component with{" "}
+          <span className="highlight">Dropdown</span> component.
           <Code>
             {`
 import React from "react";
@@ -150,14 +150,14 @@ import { Dropdown, DropdownMenu } from "react-uicomp";
 export default function DropdownComponent() {
   return (
     <Dropdown triggerElement={() => <button>Toggle Menu</button>}>
-      <DropdownMenu.Container>
-        <DropdownMenu.Item onClick={() => false}>Item 1</DropdownMenu.Item>
-        <DropdownMenu.Item onClick={() => false}>Item 2</DropdownMenu.Item>
-        <DropdownMenu.Separator />
-        <DropdownMenu.Item onClick={() => false} danger={true}>
+      <Menu.Container>
+        <Menu.Item onClick={() => false}>Item 1</Menu.Item>
+        <Menu.Item onClick={() => false}>Item 2</Menu.Item>
+        <Menu.Separator />
+        <Menu.Item onClick={() => false} danger={true}>
           Item 3
-        </DropdownMenu.Item>
-      </DropdownMenu.Container>
+        </Menu.Item>
+      </Menu.Container>
     </Dropdown>
   );
 }

@@ -31,7 +31,7 @@ const DropdownPage = () => {
       <section>
         <SecondaryTitle>Demo</SecondaryTitle>
         <Dropdown
-          triggerElement={() => <button className="button">Toggle Menu</button>}
+          trigger={() => <button className="button">Toggle Menu</button>}
         >
           <div
             style={{
@@ -51,14 +51,13 @@ const DropdownPage = () => {
 
         <Paragraph>
           You can create any component a trigger element i.e. element which
-          toggles the dropdown.{" "}
-          <span className="highlight">triggerElement</span> prop accepts a
-          function which handles triggering of the dropdown and children inside{" "}
-          <span className="highlight">&lt;Dropdown&gt;</span> component is the
-          content which gets toggled.
+          toggles the dropdown. <span className="highlight">trigger</span> prop
+          accepts a function which handles triggering of the dropdown and
+          children inside <span className="highlight">&lt;Dropdown&gt;</span>{" "}
+          component is the content which gets toggled.
           <Code>
             {`
-<Dropdown triggerElement={() => <button>Toggle Menu</button>}>
+<Dropdown trigger={() => <button>Toggle Menu</button>}>
   <div
     style={{
       background: "#FFF",
@@ -96,7 +95,7 @@ const DropdownPage = () => {
               <td>-</td>
             </tr>
             <tr>
-              <td>triggerElement</td>
+              <td>trigger</td>
               <td>{"function({ active }) => ReactNode"}</td>
               <td>
                 Function which should return the element which will trigger the

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BsFillCaretDownFill } from "react-icons/all";
 import { ActiveLink } from "react-auth-navigation";
-import { useMeasure, useAnimatedValue, AnimatedBlock } from "react-uicomp";
+import { useMeasure, useAnimatedValue, AnimatedBlock } from "react-ui-animate";
 
 const NavGroup = ({ title, navItems }) => {
   const [height, setHeight] = useState(0);

@@ -5,6 +5,8 @@ import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 import Code from "../common/code/Code.common";
 import ToastComponent from "../demos/toast";
 
+import { Label } from "../common/label/Label.common";
+
 const ToastPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -12,6 +14,8 @@ const ToastPage = () => {
 
   return (
     <div>
+      <Label />
+
       <Title>Toast</Title>
       <section>
         <Paragraph>

@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimatedBlock, useAnimatedValue, interpolate } from "react-uicomp";
+import { AnimatedBlock, useAnimatedValue, interpolate } from "react-ui-animate";
 
 import { useAuth } from "react-auth-navigation";
 

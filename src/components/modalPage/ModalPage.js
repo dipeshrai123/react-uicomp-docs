@@ -5,6 +5,7 @@ import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 import Code from "../common/code/Code.common";
 
 import Modal from "../demos/modal";
+import { Label } from "../common/label/Label.common";
 
 const ModalPage = () => {
   useEffect(() => {
@@ -13,6 +14,8 @@ const ModalPage = () => {
 
   return (
     <div>
+      <Label />
+
       <Title>Modal</Title>
       <section>
         <Paragraph>
@@ -56,7 +59,7 @@ const ModalPage = () => {
               <td>false</td>
             </tr>
             <tr>
-              <td>onOutsideClick(optional)</td>
+              <td>onOutsideClick (optional)</td>
               <td>function</td>
               <td>
                 Function that is called when clicked outside of modal if passed.
@@ -64,22 +67,28 @@ const ModalPage = () => {
               <td>-</td>
             </tr>
             <tr>
-              <td>style</td>
+              <td>style (optional)</td>
               <td>style</td>
               <td>Used to override default styling</td>
               <td>-</td>
             </tr>
             <tr>
-              <td>isAnimated</td>
+              <td>isAnimated (optional)</td>
               <td>boolean</td>
               <td>Should animate or not while modal open or close</td>
               <td>true</td>
             </tr>
             <tr>
-              <td>animationType</td>
+              <td>animationType (optional)</td>
               <td>"fade" | "expand" | "elastic"</td>
               <td>Type of animation for modal</td>
               <td>"expand"</td>
+            </tr>
+            <tr>
+              <td>disableScroll (optional)</td>
+              <td>boolean</td>
+              <td>Should the scroll be disabled or not when modal is open</td>
+              <td>false</td>
             </tr>
           </tbody>
         </table>

@@ -5,6 +5,8 @@ import Code from "../common/code/Code.common";
 import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
 
+import { Label } from "../common/label/Label.common";
+
 const DropdownPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -12,26 +14,19 @@ const DropdownPage = () => {
 
   return (
     <div>
+      <Label />
       <Title>Dropdown</Title>
       <section>
         <Paragraph>
-          When it comes to creating a dropdown component we should also think of
-          small things such as dismiss the dropdown when clicked outside, some
-          small animations and position of a dropdown. It requires some work to
-          handle all those small details.{" "}
-        </Paragraph>
-        <Paragraph>
-          React UI Comp comes with a{" "}
-          <span className="highlight">&lt;Dropdown&gt;</span> component which
-          handles all those things for you. It converts any component into a
-          dropdown component very easily.
+          Utility HOC Component to convert any component into dropdown
+          component.
         </Paragraph>
       </section>
 
       <section>
         <SecondaryTitle>Demo</SecondaryTitle>
         <Dropdown
-          triggerElement={() => <button className="button">Toggle Menu</button>}
+          trigger={() => <button className="button">Toggle Menu</button>}
         >
           <div
             style={{
@@ -51,14 +46,13 @@ const DropdownPage = () => {
 
         <Paragraph>
           You can create any component a trigger element i.e. element which
-          toggles the dropdown.{" "}
-          <span className="highlight">triggerElement</span> prop accepts a
-          function which handles triggering of the dropdown and children inside{" "}
-          <span className="highlight">&lt;Dropdown&gt;</span> component is the
-          content which gets toggled.
+          toggles the dropdown. <span className="highlight">trigger</span> prop
+          accepts a function which handles triggering of the dropdown and
+          children inside <span className="highlight">&lt;Dropdown&gt;</span>{" "}
+          component is the content which gets toggled.
           <Code>
             {`
-<Dropdown triggerElement={() => <button>Toggle Menu</button>}>
+<Dropdown trigger={() => <button>Toggle Menu</button>}>
   <div
     style={{
       background: "#FFF",
@@ -96,7 +90,7 @@ const DropdownPage = () => {
               <td>-</td>
             </tr>
             <tr>
-              <td>triggerElement</td>
+              <td>trigger</td>
               <td>{"function({ active }) => ReactNode"}</td>
               <td>
                 Function which should return the element which will trigger the
@@ -105,7 +99,7 @@ const DropdownPage = () => {
               <td>-</td>
             </tr>
             <tr>
-              <td>active(optional)</td>
+              <td>active (optional)</td>
               <td>boolean</td>
               <td>
                 Sets default state of dropdown, either it is active or not by
@@ -114,25 +108,25 @@ const DropdownPage = () => {
               <td>false</td>
             </tr>
             <tr>
-              <td>isAnimated(optional)</td>
+              <td>isAnimated (optional)</td>
               <td>boolean</td>
               <td>Should animate or not while toggling between dropdown</td>
               <td>true</td>
             </tr>
             <tr>
-              <td>animationType(optional)</td>
+              <td>animationType (optional)</td>
               <td>"fade" | "expand" | "elastic"</td>
               <td>Type of animation for dropdown</td>
               <td>"expand"</td>
             </tr>
             <tr>
-              <td>dropdownStyles(optional)</td>
+              <td>style (optional)</td>
               <td>style</td>
               <td>Style object to style the dropdown</td>
               <td>-</td>
             </tr>
             <tr>
-              <td>placement(optional)</td>
+              <td>placement (optional)</td>
               <td>
                 "bottomleft" | "bottommiddle" | "bottomright" | "topleft" |
                 "topmiddle" | "topright"
@@ -141,13 +135,13 @@ const DropdownPage = () => {
               <td>"bottomright"</td>
             </tr>
             <tr>
-              <td>dismissOnOutsideClick(optional)</td>
+              <td>outDismiss (optional)</td>
               <td>boolean</td>
               <td>Should dismiss dropdown if we click outside dropdown</td>
               <td>true</td>
             </tr>
             <tr>
-              <td>dismissOnInsideClick(optional)</td>
+              <td>inDismiss (optional)</td>
               <td>boolean</td>
               <td>
                 Should dismiss dropdown if we click on content inside dropdown
@@ -155,7 +149,7 @@ const DropdownPage = () => {
               <td>false</td>
             </tr>
             <tr>
-              <td>toggleOnTriggerElementClick(optional)</td>
+              <td>triggerToggle (optional)</td>
               <td>boolean</td>
               <td>Should toggle the dropdown if we click trigger element</td>
               <td>false</td>

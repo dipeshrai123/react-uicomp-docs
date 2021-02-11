@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useNavigation } from "react-auth-navigation";
 
-import NotFoundPage from "../notFoundPage/NotFoundPage";
-import QuickStartPage from "../quickStartPage/QuickStartPage";
-import DropdownPage from "../dropdownPage/DropdownPage";
-import DropdownMenuPage from "../menuPage/MenuPage";
-import ModalPage from "../modalPage/ModalPage";
-import ToastPage from "../toastPage/ToastPage";
+import NotFoundPage from "../pages/notFoundPage/NotFoundPage";
+import QuickStartPage from "../pages/quickStartPage/QuickStartPage";
+import DropdownPage from "../pages/dropdownPage/DropdownPage";
+import DropdownMenuPage from "../pages/menuPage/MenuPage";
+import ModalPage from "../pages/modalPage/ModalPage";
+import ToastPage from "../pages/toastPage/ToastPage";
 import RippleButtonPage from "../pages/rippleButtonPage/RippleButtonPage";
 
 const Redirect = () => {

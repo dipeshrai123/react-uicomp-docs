@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import Title from "../common/title/Title";
-import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
-import Paragraph from "../common/paragraph/Paragraph";
-import Code from "../common/code/Code.common";
+import Title from "../../common/title/Title";
+import SecondaryTitle from "../../common/secondaryTitle/SecondaryTitle";
+import Paragraph from "../../common/paragraph/Paragraph";
+import Code from "../../common/code/Code.common";
 
-import { Label } from "../common/label/Label.common";
+import { Label } from "../../common/label/Label.common";
 
 const QuickStartPage = () => {
   useEffect(() => {

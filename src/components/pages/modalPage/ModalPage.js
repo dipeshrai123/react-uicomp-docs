@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import Title from "../common/title/Title";
-import Paragraph from "../common/paragraph/Paragraph";
-import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
-import Code from "../common/code/Code.common";
+import Title from "../../common/title/Title";
+import Paragraph from "../../common/paragraph/Paragraph";
+import SecondaryTitle from "../../common/secondaryTitle/SecondaryTitle";
+import Code from "../../common/code/Code.common";
 
-import Modal from "../demos/modal";
-import { Label } from "../common/label/Label.common";
+import Modal from "../../demos/modal";
+import { Label } from "../../common/label/Label.common";
 
 const ModalPage = () => {
   useEffect(() => {

@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import Title from "../common/title/Title";
-import Paragraph from "../common/paragraph/Paragraph";
-import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
-import Code from "../common/code/Code.common";
-import ToastComponent from "../demos/toast";
+import Title from "../../common/title/Title";
+import Paragraph from "../../common/paragraph/Paragraph";
+import SecondaryTitle from "../../common/secondaryTitle/SecondaryTitle";
+import Code from "../../common/code/Code.common";
+import ToastComponent from "../../demos/toast";
 
-import { Label } from "../common/label/Label.common";
+import { Label } from "../../common/label/Label.common";
 
 const ToastPage = () => {
   useEffect(() => {

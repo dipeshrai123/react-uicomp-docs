@@ -4,6 +4,8 @@ import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 import Paragraph from "../common/paragraph/Paragraph";
 import Code from "../common/code/Code.common";
 
+import { Label } from "../common/label/Label.common";
+
 const QuickStartPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -11,6 +13,8 @@ const QuickStartPage = () => {
 
   return (
     <div>
+      <Label />
+
       <Title>Quick Start</Title>
       <section>
         <Paragraph>

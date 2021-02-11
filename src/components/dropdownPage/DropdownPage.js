@@ -5,6 +5,8 @@ import Code from "../common/code/Code.common";
 import Title from "../common/title/Title";
 import Paragraph from "../common/paragraph/Paragraph";
 
+import { Label } from "../common/label/Label.common";
+
 const DropdownPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -12,6 +14,7 @@ const DropdownPage = () => {
 
   return (
     <div>
+      <Label />
       <Title>Dropdown</Title>
       <section>
         <Paragraph>

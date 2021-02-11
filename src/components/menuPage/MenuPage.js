@@ -5,6 +5,8 @@ import Paragraph from "../common/paragraph/Paragraph";
 import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 import Code from "../common/code/Code.common";
 
+import { Label } from "../common/label/Label.common";
+
 const DropdownMenuPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -12,6 +14,8 @@ const DropdownMenuPage = () => {
 
   return (
     <div>
+      <Label />
+
       <Title>Menu</Title>
       <section>
         <Paragraph>UI component for Dropdown Element</Paragraph>

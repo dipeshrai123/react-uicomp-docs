@@ -5,6 +5,7 @@ import SecondaryTitle from "../common/secondaryTitle/SecondaryTitle";
 import Code from "../common/code/Code.common";
 
 import Modal from "../demos/modal";
+import { Label } from "../common/label/Label.common";
 
 const ModalPage = () => {
   useEffect(() => {
@@ -13,6 +14,8 @@ const ModalPage = () => {
 
   return (
     <div>
+      <Label />
+
       <Title>Modal</Title>
       <section>
         <Paragraph>

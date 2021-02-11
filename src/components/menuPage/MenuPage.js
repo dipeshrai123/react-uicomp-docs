@@ -66,9 +66,15 @@ const DropdownMenuPage = () => {
               <td>-</td>
             </tr>
             <tr>
-              <td>style</td>
+              <td>style (optional)</td>
               <td>style</td>
               <td>Used to override default styling</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>className (optional)</td>
+              <td>string</td>
+              <td>Describing custom class name to container</td>
               <td>-</td>
             </tr>
           </tbody>
@@ -80,7 +86,7 @@ const DropdownMenuPage = () => {
 
         <Paragraph>
           It defines the menu items for{" "}
-          <span className="highlight">DropdownMenu.Container</span>
+          <span className="highlight">Menu.Container</span>
         </Paragraph>
       </section>
 
@@ -105,21 +111,27 @@ const DropdownMenuPage = () => {
               <td>-</td>
             </tr>
             <tr>
-              <td>style</td>
+              <td>onClick</td>
+              <td>function</td>
+              <td>Handles onClick event for an item</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>style (optional)</td>
               <td>style</td>
               <td>Used to override default styling</td>
               <td>-</td>
             </tr>
             <tr>
-              <td>danger(optional)</td>
+              <td>danger (optional)</td>
               <td>boolean</td>
               <td>Highlights the item with default color</td>
               <td>false</td>
             </tr>
             <tr>
-              <td>onClick</td>
-              <td>function</td>
-              <td>Handles onClick event for an item</td>
+              <td>className (optional)</td>
+              <td>string</td>
+              <td>Describing custom class name to menu item</td>
               <td>-</td>
             </tr>
           </tbody>

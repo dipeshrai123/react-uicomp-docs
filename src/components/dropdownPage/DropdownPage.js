@@ -104,7 +104,7 @@ const DropdownPage = () => {
               <td>-</td>
             </tr>
             <tr>
-              <td>active(optional)</td>
+              <td>active (optional)</td>
               <td>boolean</td>
               <td>
                 Sets default state of dropdown, either it is active or not by
@@ -113,25 +113,25 @@ const DropdownPage = () => {
               <td>false</td>
             </tr>
             <tr>
-              <td>isAnimated(optional)</td>
+              <td>isAnimated (optional)</td>
               <td>boolean</td>
               <td>Should animate or not while toggling between dropdown</td>
               <td>true</td>
             </tr>
             <tr>
-              <td>animationType(optional)</td>
+              <td>animationType (optional)</td>
               <td>"fade" | "expand" | "elastic"</td>
               <td>Type of animation for dropdown</td>
               <td>"expand"</td>
             </tr>
             <tr>
-              <td>dropdownStyles(optional)</td>
+              <td>style (optional)</td>
               <td>style</td>
               <td>Style object to style the dropdown</td>
               <td>-</td>
             </tr>
             <tr>
-              <td>placement(optional)</td>
+              <td>placement (optional)</td>
               <td>
                 "bottomleft" | "bottommiddle" | "bottomright" | "topleft" |
                 "topmiddle" | "topright"
@@ -140,13 +140,13 @@ const DropdownPage = () => {
               <td>"bottomright"</td>
             </tr>
             <tr>
-              <td>dismissOnOutsideClick(optional)</td>
+              <td>outDismiss (optional)</td>
               <td>boolean</td>
               <td>Should dismiss dropdown if we click outside dropdown</td>
               <td>true</td>
             </tr>
             <tr>
-              <td>dismissOnInsideClick(optional)</td>
+              <td>inDismiss (optional)</td>
               <td>boolean</td>
               <td>
                 Should dismiss dropdown if we click on content inside dropdown
@@ -154,7 +154,7 @@ const DropdownPage = () => {
               <td>false</td>
             </tr>
             <tr>
-              <td>toggleOnTriggerElementClick(optional)</td>
+              <td>triggerToggle (optional)</td>
               <td>boolean</td>
               <td>Should toggle the dropdown if we click trigger element</td>
               <td>false</td>

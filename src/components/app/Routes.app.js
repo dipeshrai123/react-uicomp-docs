@@ -7,6 +7,7 @@ import DropdownPage from "../dropdownPage/DropdownPage";
 import DropdownMenuPage from "../menuPage/MenuPage";
 import ModalPage from "../modalPage/ModalPage";
 import ToastPage from "../toastPage/ToastPage";
+import RippleButtonPage from "../pages/rippleButtonPage/RippleButtonPage";
 
 const Redirect = () => {
   const { navigation } = useNavigation();
@@ -55,6 +56,12 @@ export const PUBLIC_PATHS = [
     name: "Toast",
     path: "/docs/toast",
     component: ToastPage,
+    restricted: true,
+  },
+  {
+    name: "RippleButton",
+    path: "/docs/ripple-button",
+    component: RippleButtonPage,
     restricted: true,
   },
   {

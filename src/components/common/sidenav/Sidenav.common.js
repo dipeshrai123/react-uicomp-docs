@@ -22,6 +22,7 @@ const Sidenav = () => {
           { name: "Menu", link: "/docs/menu" },
           { name: "Modal", link: "/docs/modal" },
           { name: "Toast", link: "/docs/toast" },
+          { name: "RippleButton", link: "/docs/ripple-button" },
         ]}
       />
     </>

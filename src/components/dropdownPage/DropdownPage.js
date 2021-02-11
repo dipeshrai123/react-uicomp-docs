@@ -15,16 +15,8 @@ const DropdownPage = () => {
       <Title>Dropdown</Title>
       <section>
         <Paragraph>
-          When it comes to creating a dropdown component we should also think of
-          small things such as dismiss the dropdown when clicked outside, some
-          small animations and position of a dropdown. It requires some work to
-          handle all those small details.{" "}
-        </Paragraph>
-        <Paragraph>
-          React UI Comp comes with a{" "}
-          <span className="highlight">&lt;Dropdown&gt;</span> component which
-          handles all those things for you. It converts any component into a
-          dropdown component very easily.
+          Utility HOC Component to convert any component into dropdown
+          component.
         </Paragraph>
       </section>
 

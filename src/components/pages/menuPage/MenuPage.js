@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Dropdown, Menu } from "react-uicomp";
+import { Dropdown, Menu, RippleButton } from "react-uicomp";
 import Title from "../../common/title/Title";
 import Paragraph from "../../common/paragraph/Paragraph";
 import SecondaryTitle from "../../common/secondaryTitle/SecondaryTitle";
@@ -26,8 +26,7 @@ const DropdownMenuPage = () => {
 
         <Dropdown
           animationType="expand"
-          placement="bottommiddle"
-          trigger={() => <button className="button">Toggle Menu</button>}
+          trigger={() => <RippleButton title="Toggle Menu" />}
         >
           <Menu.Container>
             <Menu.Item onClick={() => false}>Item 1</Menu.Item>

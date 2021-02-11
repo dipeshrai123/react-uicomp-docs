@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { Dropdown } from "react-uicomp";
+import { Dropdown, RippleButton } from "react-uicomp";
+
 import SecondaryTitle from "../../common/secondaryTitle/SecondaryTitle";
 import Code from "../../common/code/Code.common";
 import Title from "../../common/title/Title";
@@ -25,9 +26,7 @@ const DropdownPage = () => {
 
       <section>
         <SecondaryTitle>Demo</SecondaryTitle>
-        <Dropdown
-          trigger={() => <button className="button">Toggle Menu</button>}
-        >
+        <Dropdown trigger={() => <RippleButton title="Toggle Menu" />}>
           <div
             style={{
               background: "#FFF",

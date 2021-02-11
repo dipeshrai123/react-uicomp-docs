@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import { Modal } from "react-uicomp";
+import { Modal, RippleButton } from "react-uicomp";
 
 const ModalPage = () => {
   const [visible, setVisible] = useState(false);
 
   return (
     <div>
-      <button className="button" onClick={() => setVisible(true)}>
-        Open Modal
-      </button>
+      <RippleButton title="Open Modal" onClick={() => setVisible(true)} />
       <Modal visible={visible} onOutsideClick={() => setVisible(false)}>
         Modal Content Goes Here...
         <div
@@ -18,9 +16,7 @@ const ModalPage = () => {
             justifyContent: "flex-end",
           }}
         >
-          <button className="button" onClick={() => setVisible(false)}>
-            Close Modal
-          </button>
+          <RippleButton title="Close Modal" onClick={() => setVisible(false)} />
         </div>
       </Modal>
     </div>
